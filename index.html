@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Platte Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-custom-color {
+            background-color: rgb(20, 20, 20); /* Set your custom RGB color here */
+        }
+        .bg-custom-color2 {
+            background-color: rgb(36, 33, 33); /* Set your custom RGB color here */
+        }
+    </style>
+</head>
+<body class="bg-white-900 font-sans">
+
+    <header class="relative h-screen">
+
+        <!-- Your hero content goes here -->
+        <img src="C:\Users\jason\OneDrive\Desktop\Website\background.jpg" alt="Jason Platte" class="object-cover w-full h-full">
+
+        <!-- Content Centered on the Hero Section -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
+            <div class="p-4">
+                <h1 class="text-4xl font-bold mb-4 text-center">Jason Platte</h1>
+                <h1 class="text-lg font-bold mb-4 text-center" style="color: rgb(53, 168, 65)">CS Games Student</h1>
+                <p class="text-lg text-center">Game Developer</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <div style="background-color: rgb(243, 244, 246);">
+        <section class="py-16 mx-4 bg-gray-100">
+            <div class="container mx-auto flex items-center justify-center flex-col">
+                <!-- Photo of Myself -->
+                <img src="C:\Users\jason\OneDrive\Desktop\Website\headshot.jpg" alt="Your Name" class="rounded-full w-32 h-32 mb-4">
+
+                <h2 class="text-2xl font-bold mb-8">About Me</h2>
+                <p class="text-gray-700">I am a Computer Science Games student at the University of Southern California. I am a FIRST alum, and I also play for the Varsity Overwatch team. My interest lies in game development particularly gameplay engineering or technical design. I am proficient in various programming languages and game development frameworks. I enjoy creative thinking, level design, and all types of games. My all time favorites are Wizard101, Ark Survival Evolved, Destiny, Overwatch, ESO, Borderlands, Halo, and I am a huge fan of Indie Horror. </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Skillset Section -->
+    <div style="background-color: rgb(36, 33, 33);">
+        <section class="py-16 mx-4 bg-custom-color2">
+            <div class="container mx-auto" style="background-color: rgb(36, 33, 33)">
+                <h2 class="text-2xl font-bold mb-8" style="color: rgb(53, 168, 65)">Skillset</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="background-color: rgb(36, 33, 33)">
+                    <!-- Add your skills and descriptions here -->
+                    <div class="p-4 bg-white rounded shadow-md">
+                        <h3 class="text-lg font-bold mb-2">Languages</h3>
+                        <p>Proficient in C++ (my strongest), C#, Java, JavaScript, Python, HTML5, CSS, and I have some experience with Blueprint</p>
+                    </div>
+                    <div class="p-4 bg-white rounded shadow-md">
+                        <h3 class="text-lg font-bold mb-2">Engines/Frameworks</h3>
+                        <p>Experience with Unity and Unreal Engine 5</p>
+                    </div>
+                    <div class="p-4 bg-white rounded shadow-md">
+                        <h3 class="text-lg font-bold mb-2">Tools</h3>
+                        <p>Github, GitKracken, Perforce, Slack</p>
+                    </div>
+                    <!-- Add more skills as needed -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- Projects Section -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-8">Projects</h2>
+        <!-- Project 1 -->
+        <div class="flex flex-col md:flex-row items-stretch md:space-x-8">
+            <!-- Gameplay Footage and Screenshots -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2 gap-4">
+                <h4 class="text-md font-bold mb-2">Gameplay Footage:</h4>
+                <!-- Add your video embed code or link here -->
+                <iframe width="560" height="315" src="https://youtube.com/embed/uLLd6SOOXFw" frameborder="0" allowfullscreen></iframe>
+                <h4 class="text-md font-bold mb-2">Looping:</h4>
+                <iframe width="560" height="315" src="https://youtube.com/embed/snmm29PdMuA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Name of the Game, Introductory Text, and Contributions -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2">
+                <h3 class="text-lg font-bold mb-2">The Bookstore (August-December 2023)</h3>
+                <p>The Bookstore is a project I worked on as a part of a 15-week course - CTIN 489 at USC. It was a two-person Unity project that I worked on with my classmate Alex Velichkov. The Bookstore is a short horror game based on the USC Bookstore (because we thought it would make a good backrooms-esque map).</p>
+                <!-- Contributions -->
+                <h4 class="text-md font-bold mt-4 mb-2">My Contributions:</h4>
+                <ul class="list-disc pl-6">
+                    <li>Implemented core gameplay mechanics - Item pickup, Walking, Running</li>
+                    <li>Designed and optimized all in-game environments</li>
+                    <li>Collaborated on the mechanic to loop escalators</li>
+                    <li>Collaborated with Berklee College of Music to implement unique sounds</li>
+                </ul>
+                <!-- Link to itch.io -->
+                <a href="https://itch.io/your-game-link" target="_blank" class="text-blue-500 hover:underline block mt-4">Visit itch.io</a>
+                <!-- Screenshots -->
+                <h4 class="text-md font-bold mt-4 mb-2">Screenshots:</h4>
+                <!-- Add your screenshots here -->
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="C:\Users\jason\OneDrive\Desktop\Website\ss1.png" alt="Screenshot 1" class="w-full rounded">
+                    <img src="C:\Users\jason\OneDrive\Desktop\Website\ss4.png" alt="Screenshot 2" class="w-full rounded">
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <div style="background-color: rgb(20, 20, 20);">
+        <section class="py-16 mx-4 bg-custom-color">
+            <!-- Contact Section -->
+            <div class="container mx-auto">
+              <h2 class="text-2xl font-bold mb-8" style="color: rgb(53, 168, 65)">Contact</h2>
+                <form action="process-form.php" method="post">
+                    <p class="text-gray-100">Feel free to reach out to me or connect with me on LinkedIn. I am open to collaboration and always excited to discuss new opportunities.</p>
+                    <a href="https://www.linkedin.com/in/jason-platte-7981bb261/" target="_blank" class="text-blue-500 hover:text-blue-300">                            <i class="fab fa-linkedin fa-4x"></i>
+                    </a>
+                    <div class="mt-8">
+                        <label for="email" class="block text-sm font-medium text-gray-100">Email:</label>                            <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+                       </div>
+                    <div class="mt-4">
+                    <label for="message" class="block text-sm font-medium text-gray-100">Message:</label>
+                    <textarea id="message" name="message" class="mt-1 p-2 w-full border rounded-md"></textarea>
+                </div>
+            <div class="mt-4">                            
+          <button type="submit" class="text-white px-4 py-2 rounded-md" style="background-color: rgb(53, 168, 65)">Send Message</button>                </div>
+        </form>
+    </div>
+</section>
+
+        </section>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="text-white p-4 text-center" style="background-color: rgb(36, 33, 33)">
+        <p>&copy; 2023 Jason Platte. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional: Add your JavaScript code here -->
+
+</body>
+</html>
