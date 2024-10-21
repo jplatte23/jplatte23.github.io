@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .bg-custom-color {
-            background-color: rgb(20, 20, 20); /* Set your custom RGB color here */
+            background-color: rgb(20, 20, 20); 
         }
         .bg-custom-color2 {
-            background-color: rgb(36, 33, 33); /* Set your custom RGB color here */
+            background-color: rgb(36, 33, 33); 
         }
     </style>
 </head>
@@ -19,7 +19,6 @@
 
     <header class="relative h-screen">
 
-        <!-- Your hero content goes here -->
         <img src="background.jpg" alt="Jason Platte" class="object-cover w-full h-full">
 
         <!-- Content Centered on the Hero Section -->
@@ -51,7 +50,7 @@
             <div class="container mx-auto" style="background-color: rgb(36, 33, 33)">
                 <h2 class="text-2xl font-bold mb-8" style="color: rgb(53, 168, 65)">Skillset</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="background-color: rgb(36, 33, 33)">
-                    <!-- Add your skills and descriptions here -->
+                    <!-- skills and descriptions here -->
                     <div class="p-4 bg-white rounded shadow-md">
                         <h3 class="text-lg font-bold mb-2">Languages</h3>
                         <p>Proficient in C++ (my strongest), C#, Java, JavaScript, Python, HTML5, CSS, and I have some experience with Blueprint</p>
@@ -62,7 +61,7 @@
                     </div>
                     <div class="p-4 bg-white rounded shadow-md">
                         <h3 class="text-lg font-bold mb-2">Tools</h3>
-                        <p>Github, GitKracken, Perforce, Slack</p>
+                        <p>Github, GitKracken, Perforce, Slack, Linear</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +77,7 @@
             <!-- Gameplay Footage and Screenshots -->
             <div class="p-4 bg-white rounded shadow-md md:w-1/2 gap-4">
                 <h4 class="text-md font-bold mb-2">Gameplay Footage:</h4>
-                <!-- Add your video embed code or link here -->
+                <!-- video embed code or link here -->
                 <iframe width="560" height="315" src="https://youtube.com/embed/uLLd6SOOXFw" frameborder="0" allowfullscreen></iframe>
                 <h4 class="text-md font-bold mb-2">Looping:</h4>
                 <iframe width="560" height="315" src="https://youtube.com/embed/snmm29PdMuA" frameborder="0" allowfullscreen></iframe>
@@ -98,12 +97,57 @@
                 <!-- Link to itch.io -->
                 <a href="https://avelichkov.itch.io/the-bookstore" target="_blank" class="text-blue-500 hover:underline block mt-4">The Bookstore on itch.io</a>
                 <!-- Screenshots -->
-                <h4 class="text-md font-bold mt-4 mb-2">Screenshots:</h4>
-                <!-- Add your screenshots here -->
-                <div class="grid grid-cols-2 gap-4">
+                <h4 class="text-md font-bold mt-4 mb-2">Screenshots:</h4>                <div class="grid grid-cols-2 gap-4">
                     <img src="ss1.png" alt="Screenshot 1" class="w-full rounded">
                     <img src="ss4.png" alt="Screenshot 2" class="w-full rounded">
                 </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch md:space-x-8">
+            <!-- Gameplay Footage and Screenshots -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2 gap-4">
+                <h4 class="text-md font-bold mb-2">Gameplay Footage:</h4>
+                <!-- Add your video embed code or link here -->
+                <iframe width="560" height="315" src="https://youtube.com/embed/6u-GdPByD0k?si=8xgtb_bTYN5M1wY6" frameborder="0" allowfullscreen></iframe>
+                <h4 class="text-md font-bold mb-2">Level 2:</h4>
+                <iframe width="560" height="315" src="https://youtube.com/embed/4bkvATIy5pU?si=YDGHRDWixTX4GSYE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Name of the Game, Introductory Text, and Contributions -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2">
+                <h3 class="text-lg font-bold mb-2">Deep Containment (July-August 2024)</h3>
+                <p>Deep Containment was a summer project I worked on with a couple friends in Unity.</p>
+                <!-- Contributions -->
+                <h4 class="text-md font-bold mt-4 mb-2">My Contributions:</h4>
+                <ul class="list-disc pl-6">
+                    <li>Implemented core gameplay mechanics - Item pickup, Walking, Running, Water current, Back-Peeking, Helmet feeling</li>
+                    <li>Designed the in-game environments using assets from my collaborators</li>
+                    <li>Implemented procedural generation and optimal pathfinding using A* (first screenshot), Enemy AI, Fish AI, Lamprey attack mechanic</li>
+                </ul>
+                <!-- Screenshots -->
+                <h4 class="text-md font-bold mt-4 mb-s2">Screenshots:</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="ss5.png" alt="Screenshot 1" class="w-full rounded">
+                    <img src="ss6.png" alt="Screenshot 2" class="w-full rounded">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-stretch md:space-x-8">
+            <!-- Gameplay Footage and Screenshots -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2 gap-4">
+                <!-- video embed code or link here -->
+            </div>
+            <!-- Name of the Game, Introductory Text, and Contributions -->
+            <div class="p-4 bg-white rounded shadow-md md:w-1/2">
+                <h3 class="text-lg font-bold mb-2">Turtle Fish (August 2024 - June 2025) WIP</h3>
+                <p>Turtle Fish is a year long capstone project (AGP) that I am currently working on as an engineer.</p>
+                <!-- Contributions -->
+                <h4 class="text-md font-bold mt-4 mb-2">My Contributions:</h4>
+                <ul class="list-disc pl-6">
+                    <li>Working closely with design to implement Obstacles such as lightning clouds or faulty boats that sink when the player is on them</li>
+                    <li>Bug fixing and working with and improving existing codebase</li>
+                </ul>
             </div>
         </div>
     </div>
