@@ -32,12 +32,64 @@
         <h2 class="text-3xl font-bold mb-8 text-green-400">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+            <!-- Project Card: The Mine -->
+            <a href="themine.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
+
+                <!-- IMAGE (default) -> VIDEO (on hover) -->
+                <div class="card-media relative h-48 overflow-hidden">
+                    <img src="images/TheMine.png" alt="Summit" class="card-poster w-full h-full object-cover">
+
+                    <video class="card-video absolute inset-0 w-full h-full object-cover"
+                           muted
+                           playsinline
+                           loop
+                           preload="metadata">
+                        <source src="videos/minedemo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="p-4">
+                    <!-- Title + Year -->
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">The Mine</h3>
+                        <span class="text-gray-500 text-sm">2026</span>
+                    </div>
+
+                    <!-- Team size + Duration -->
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>2</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Ongoing</span>
+                        </span>
+                    </div>
+
+                    <!-- Skill badges -->
+                    <div class="badges">
+                        <span class="badge">Unity</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">3D</span>
+                        <span class="badge">Perforce</span>
+                    </div>
+                </div>
+            </a>
+
             <!-- Project Card: Summit -->
             <a href="summit.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
 
                 <!-- IMAGE (default) -> VIDEO (on hover) -->
                 <div class="card-media relative h-48 overflow-hidden">
-                    <img src="ss15.png" alt="Summit" class="card-poster w-full h-full object-cover">
+                    <img src="images/ss15.png" alt="Summit" class="card-poster w-full h-full object-cover">
 
                     <video class="card-video absolute inset-0 w-full h-full object-cover"
                            muted
@@ -84,12 +136,59 @@
                 </div>
             </a>
 
+            <!-- Project Card: Art House -->
+            <a href="arthouse.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
+                <div class="card-media relative h-48 overflow-hidden">
+                    <img src="images/ss8.jpg" alt="Summit" class="card-poster w-full h-full object-cover">
+
+                    <video class="card-video absolute inset-0 w-full h-full object-cover"
+                           muted
+                           playsinline
+                           loop
+                           preload="metadata">
+                        <source src="videos/artdemo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">Art House</h3>
+                        <span class="text-gray-500 text-sm">2025</span>
+                    </div>
+
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>30+</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>1 year</span>
+                        </span>
+                    </div>
+
+                    <div class="badges">
+                        <span class="badge">Unity</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">2D</span>
+                        <span class="badge">Perforce</span>
+                        <span class="badge">Linear</span>
+                    </div>
+                </div>
+            </a>
+
 
             <!-- Project Card: The Bookstore -->
             <a href="bookstore.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <!-- IMAGE (default) -> VIDEO (on hover) -->
                 <div class="card-media relative h-48 overflow-hidden">
-                    <img src="ss7.jpg" alt="Summit" class="card-poster w-full h-full object-cover">
+                    <img src="images/ss7.jpg" alt="Summit" class="card-poster w-full h-full object-cover">
 
                     <video class="card-video absolute inset-0 w-full h-full object-cover"
                            muted
@@ -128,6 +227,7 @@
                         <span class="badge">C#</span>
                         <span class="badge">3D</span>
                         <span class="badge">Systems</span>
+                        <span class="badge">Perforce</span>
                     </div>
                 </div>
             </a>
@@ -135,8 +235,8 @@
             <!-- Project Card: Deep Containment -->
             <a href="deepcontainment.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <!-- IMAGE (default) -> VIDEO (on hover) -->
-                <div class="card-media relative h-48 overflow-hidden"> 
-                    <img src="ss6.png" alt="Summit" class="card-poster w-full h-full object-cover">
+                <div class="card-media relative h-48 overflow-hidden">
+                    <img src="images/ss6.png" alt="Summit" class="card-poster w-full h-full object-cover">
 
                     <video class="card-video absolute inset-0 w-full h-full object-cover"
                            muted
@@ -182,7 +282,7 @@
 
             <!-- Project Card: TroTrivia -->
             <a href="trotrivia.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
-                <img src="ss9.png" alt="TroTrivia" class="w-full h-48 object-cover">
+                <img src="images/ss9.png" alt="TroTrivia" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <div class="flex items-center justify-between">
                         <h3 class="text-xl font-semibold">TroTrivia</h3>
@@ -212,52 +312,6 @@
                         <span class="badge">Node</span>
                         <span class="badge">MongoDB</span>
                         <span class="badge">Full Stack</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Project Card: Art House -->
-            <a href="arthouse.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
-                <div class="card-media relative h-48 overflow-hidden">
-                    <img src="ss8.jpg" alt="Summit" class="card-poster w-full h-full object-cover">
-
-                    <video class="card-video absolute inset-0 w-full h-full object-cover"
-                           muted
-                           playsinline
-                           loop
-                           preload="metadata">
-                        <source src="videos/artdemo.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="p-4">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Art House</h3>
-                        <span class="text-gray-500 text-sm">2025</span>
-                    </div>
-
-                    <div class="meta-row">
-                        <span class="meta-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                            <span>30+</span>
-                        </span>
-
-                        <span class="meta-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>1 year</span>
-                        </span>
-                    </div>
-
-                    <div class="badges">
-                        <span class="badge">Unity</span>
-                        <span class="badge">C#</span>
-                        <span class="badge">Gameplay</span>
-                        <span class="badge">2D</span>
                     </div>
                 </div>
             </a>
