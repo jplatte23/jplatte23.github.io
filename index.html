@@ -22,17 +22,62 @@
 
         /* Purple outline + glow for cards */
         .glow-card {
-            border: 1px solid rgba(52, 211, 153, 0.25); /* subtle slate */
+            border: 1px solid rgba(52, 211, 153, 0.25); 
             transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
         }
 
-            .glow-card:hover {
-                border-color: rgba(52, 211, 153, 0.85);
-                box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.18), 0 0 18px rgba(52, 211, 153, 0.35), 0 0 48px rgba(52, 211, 153, 0.22);
-                transform: translateY(-4px) scale(1.02);
+        .glow-card:hover {
+            border-color: rgba(52, 211, 153, 0.85);
+            box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.18), 0 0 18px rgba(52, 211, 153, 0.35), 0 0 48px rgba(52, 211, 153, 0.22);
+           transform: translateY(-4px) scale(1.02);
+        }
+        .meta-row {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgba(148, 163, 184, 0.95); 
+            font-size: 12px;
+        }
+
+        .meta-item {
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+            .meta-item svg {
+                width: 14px;
+                height: 14px;
+                opacity: 0.8;
             }
+
+        /* Skill badges */
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            background: rgba(15, 23, 42, 0.55); 
+            color: rgba(226, 232, 240, 0.9);
+            font-size: 12px;
+            line-height: 1;
+        }
+        .glow-card:hover .badge {
+            border-color: rgba(52, 211, 153, 0.35);
+        }
+
     </style>
 </head>
+
 <body class="bg-black text-white">
 
     <header class="py-8 text-center" style="background-color: #202123;">
@@ -49,44 +94,186 @@
         <h2 class="text-3xl font-bold mb-8 text-green-400">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Project Card -->
+            <!-- Project Card: Summit -->
             <a href="summit.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <img src="ss15.png" alt="Summit" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold">Summit</h3>
-                    <p class="text-gray-400 text-sm">2025 - Roblox Studio|Lua</p>
+                    <!-- Title + Year -->
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">Summit</h3>
+                        <span class="text-gray-500 text-sm">2025</span>
+                    </div>
+                    <!-- Team size + Duration -->
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>2</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>5 months</span>
+                        </span>
+                    </div>
+
+                    <!-- Skill badges -->
+                    <div class="badges">
+                        <span class="badge">Roblox Studio</span>
+                        <span class="badge">Lua</span>
+                        <span class="badge">3D</span>
+                        <span class="badge">Multiplayer</span>
+                    </div>
                 </div>
             </a>
 
+            <!-- Project Card: The Bookstore -->
             <a href="bookstore.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <img src="ss7.jpg" alt="The Bookstore" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold">The Bookstore</h3>
-                    <p class="text-gray-400 text-sm">2023 - Unity|C#</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">The Bookstore</h3>
+                        <span class="text-gray-500 text-sm">2023</span>
+                    </div>
+
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>2</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>3 months</span>
+                        </span>
+                    </div>
+
+                    <div class="badges">
+                        <span class="badge">Unity</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">3D</span>
+                        <span class="badge">Systems</span>
+                    </div>
                 </div>
             </a>
 
+            <!-- Project Card: Deep Containment -->
             <a href="deepcontainment.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <img src="ss6.PNG" alt="Deep Containment" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold">Deep Containment</h3>
-                    <p class="text-gray-400 text-sm">2024 - Unity|C#</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">Deep Containment</h3>
+                        <span class="text-gray-500 text-sm">2024</span>
+                    </div>
+
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>1</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>3 months</span>
+                        </span>
+                    </div>
+
+                    <div class="badges">
+                        <span class="badge">Unity</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">3D</span>
+                        <span class="badge">AI</span>
+                        <span class="badge">Gameplay</span>
+                    </div>
                 </div>
             </a>
 
+            <!-- Project Card: TroTrivia -->
             <a href="trotrivia.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <img src="ss9.png" alt="TroTrivia" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold">TroTrivia</h3>
-                    <p class="text-gray-400 text-sm">2024 - React|Node.js|MongoDB</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">TroTrivia</h3>
+                        <span class="text-gray-500 text-sm">2024</span>
+                    </div>
+
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>5</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>3 months</span>
+                        </span>
+                    </div>
+
+                    <div class="badges">
+                        <span class="badge">React</span>
+                        <span class="badge">Node</span>
+                        <span class="badge">MongoDB</span>
+                        <span class="badge">Full Stack</span>
+                    </div>
                 </div>
             </a>
 
+            <!-- Project Card: Art House -->
             <a href="arthouse.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
                 <img src="ss8.jpg" alt="Art House" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold">Art House</h3>
-                    <p class="text-gray-400 text-sm">2025 - Unity|C#</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold">Art House</h3>
+                        <span class="text-gray-500 text-sm">2025</span>
+                    </div>
+
+                    <div class="meta-row">
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span>30+</span>
+                        </span>
+
+                        <span class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>1 year</span>
+                        </span>
+                    </div>
+
+                    <div class="badges">
+                        <span class="badge">Unity</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">Gameplay</span>
+                        <span class="badge">2D</span>
+                    </div>
                 </div>
             </a>
 
@@ -97,6 +284,33 @@
     <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
         &copy; 2026 Jason Platte. All rights reserved.
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.glow-card');
+
+            cards.forEach((card) => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const max = 8; // max tilt degrees
+                    const rotateY = ((x - centerX) / centerX) * max;
+                    const rotateX = ((y - centerY) / centerY) * -max;
+
+                    card.style.transform =
+                        `perspective(900px) translateY(-6px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
