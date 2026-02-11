@@ -1,87 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason Platte Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Platte Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg-black text-white">
+  <header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
 
-    <header class="py-6 text-center relative shadow-lg"
-            style="background-color:#202123;">
-        <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+      <a href="index.html" class="nav-link nav-glow">Games</a>
+      <a href="code.html" class="nav-link nav-glow">Code</a>
+      <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
 
-        <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
-            <a href="index.html" class="nav-link nav-glow">Games</a>
-            <a href="code.html" class="nav-link nav-glow">Code</a>
-            <a href="about.html" class="nav-link nav-glow">About</a>
-        </nav>
+    <div class="h-px w-full mt-5"
+         style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    </div>
+  </header>
 
-        <!-- gradient divider line -->
-        <div class="h-px w-full mt-5"
-             style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
-        </div>
-    </header>
+  <main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
+      <!-- Page header -->
+      <header class="text-center space-y-2">
+          <h2 class="text-4xl font-extrabold tracking-tight">Art House</h2>
+          <p class="text-gray-400">Engineer | Unity, C#, Perforce</p>
+      </header>
 
-    <main class="max-w-5xl mx-auto p-8 space-y-8">
-        <h2 class="text-4xl font-bold text-center">Art House</h2>
+      <!-- The Game -->
+      <section class="space-y-4">
+          <h3 class="text-2xl font-semibold">The Game</h3>
+          <p class="text-gray-200 leading-relaxed">
+              <span class="font-semibold text-white">Art House</span> is a narrative platformer about grief and memory, where players explore
+              hand-painted worlds and solve traversal puzzles that evolve across scenes. Built in Unity as a year-long capstone by a
+              <span class="font-semibold text-white">30+ person team</span> with a
+              <span class="font-semibold text-white">5-engineer pod</span>, with my work focused on gameplay systems, obstacle mechanics,
+              and bug fixing during iteration and polish.
+          </p>
 
-        <section class="text-center text-gray-400 space-y-2">
-            <p>Engineer | Unity, C#, Perforce</p>
-        </section>
+          <!-- Screenshot row (same “hero media” vibe as Summit) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
+                  <img src="images/ss13.jpg" alt="Art House screenshot 1" class="w-full h-full object-cover" />
+              </div>
+              <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
+                  <img src="images/ss14.jpg" alt="Art House screenshot 2" class="w-full h-full object-cover" />
+              </div>
+          </div>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-4">The Game</h3>
-            <div class="gap-10 mb-6">
-                <p>
-                    In Art House, step into the life of Lisa, mother to Ollie and Zoe, who's struggling to pick up the pieces of her life after the passing of her mother,
-                    Betty. After returning to Betty's mountain home, Lisa and her kids get trapped inside of Betty's paintings where her memories come to life. Guide Lisa
-                    through hauntingly beautiful paintings while solving puzzles and confronting the shadows of the family�s past. Navigate a journey through grief and towards
-                    healing that lingers after the final brushstroke. This was a year long Unity project made by a team of over 30 people including a 5 person engineering team I was part of.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <img src="images/ss13.jpg" alt="Screenshot 1" class="w-full rounded">
-                <img src="images/ss14.jpg" alt="Screenshot 2" class="w-full rounded">
-            </div>
-        </section>
+          <!-- Focus + Links row -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <!-- Technical Focus -->
+              <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
+                  <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
+                  <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                      <li><span class="text-white font-semibold">Gameplay Systems:</span> interactive obstacles, puzzle/traversal mechanics, enemy behavior scripting</li>
+                      <li><span class="text-white font-semibold">Iteration + Bug Fixing:</span> reproducing playtest issues, tracing root causes, validating fixes across scenes</li>
+                      <li><span class="text-white font-semibold">Collaboration:</span> designer-driven iteration and polish with clear gameplay goals and constraints</li>
+                      <li><span class="text-white font-semibold">Tools:</span> Unity, C#, Perforce, Linear</li>
+                  </ul>
+              </div>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-4">My Contributions</h3>
-            <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Fixed 50+ bugs that we tracked through tasks on Linear</li>
-                <li>Prototyped and implemented obstacles including lightning clouds and rips (portals)</li>
-                <li>Continuously improved scripts on enemy behaviors to improve player experience especially on the shifters</li>
-                <li>Coordinated with the design and QA team to make sure we followed our design docs</li>
-            </ul>
-        </section>
+              <!-- Links -->
+              <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
+                  <h4 class="text-lg font-semibold mb-2">Links</h4>
 
-        <a href="https://store.steampowered.com/app/3532010/Art_House/" target="_blank" style="
-        display: inline-block;
-        background-color: #1b2838;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.2s;">
-            Download on Steam
-        </a>
+                  <!-- Steam button w/ icon (icon + text) -->
+                  <a href="https://store.steampowered.com/app/3532010/Art_House/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
+                    px-4 py-3 font-semibold text-white transition shadow"
+                     aria-label="Open Art House on Steam">
+                      <!-- Steam icon (simple) -->
+                      <img src="icons/steam.svg" alt="" class="w-20 h-20" />
 
+                  </a>
 
-    </main>
+                  <p class="text-xs text-gray-500 mt-3">
+                      Steam link opens in a new tab.
+                  </p>
+              </div>
+          </div>
+      </section>
 
+      <!-- Contribution Gallery -->
+      <section class="space-y-4">
+          <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
-        &copy; 2026 Jason Platte. All rights reserved.
-    </footer>
+          <!-- Card 1 -->
+          <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+              <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                  <img src="gifs/arthouse-bugfixing.gif"
+                       alt="Gameplay bug fixing and stability work"
+                       class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-3">
+                  <h4 class="text-lg font-semibold">Gameplay Bug Fixing &amp; Stability</h4>
+                  <p class="text-gray-300 leading-relaxed">
+                      Resolved 50+ player-facing issues across traversal, puzzle interactions, and gameplay edge cases by reproducing bugs from
+                      team reports, tracing root causes in Unity, and implementing fixes that held up across multiple scenes during iteration.
+                  </p>
+                  <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                      <li>Reproduced issues from Linear tasks and playtest notes</li>
+                      <li>Debugged Unity behaviors via logs, breakpoints, and scene inspection</li>
+                      <li>Fixed interaction/puzzle blockers and “stuck state” edge cases</li>
+                      <li>Validated fixes across levels during frequent content updates</li>
+                  </ul>
+                  <div class="chip-row">
+                      <span class="chip">Debugging</span>
+                      <span class="chip">Stability</span>
+                      <span class="chip">Iteration</span>
+                      <span class="chip">Unity</span>
+                  </div>
+              </div>
+          </article>
 
+          <!-- Card 2 -->
+          <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+              <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                  <img src="gifs/arthouse-portals.gif"
+                       alt="Portal and rift obstacle mechanics"
+                       class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-3">
+                  <h4 class="text-lg font-semibold">Obstacle Mechanics: Portals / Rifts</h4>
+                  <p class="text-gray-300 leading-relaxed">
+                      Prototyped and implemented portal-style obstacle mechanics designed to be readable in motion, integrating them into the
+                      prefab pipeline so designers could place, tweak, and iterate quickly without fragile setup.
+                  </p>
+                  <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                      <li>Built portal behavior + trigger/collision logic in C#</li>
+                      <li>Tuned timing and feedback for clarity and consistency</li>
+                      <li>Supported designer iteration with prefab-friendly configuration</li>
+                      <li>Integrated into levels and refined based on playtests</li>
+                  </ul>
+                  <div class="chip-row">
+                      <span class="chip">Gameplay Systems</span>
+                      <span class="chip">Prototyping</span>
+                      <span class="chip">Prefabs</span>
+                      <span class="chip">Tuning</span>
+                  </div>
+              </div>
+          </article>
 
+          <!-- Card 3 -->
+          <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+              <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                  <img src="gifs/arthouse-lightning.gif"
+                       alt="Lightning cloud hazard timing and feedback"
+                       class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-3">
+                  <h4 class="text-lg font-semibold">Lightning Cloud Hazard &amp; Timing</h4>
+                  <p class="text-gray-300 leading-relaxed">
+                      Created an environmental hazard that periodically spawns lightning to pressure player movement and decision-making,
+                      using controlled timing and clear telegraphing so it feels tense but fair during puzzle traversal.
+                  </p>
+                  <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                      <li>Implemented timed strike cycle, cooldowns, and state handling</li>
+                      <li>Added clear telegraphing/feedback to support player readability</li>
+                      <li>Integrated hit detection and gameplay responses for hazards</li>
+                      <li>Tuned cadence and difficulty based on playtest feedback</li>
+                  </ul>
+                  <div class="chip-row">
+                      <span class="chip">Gameplay Systems</span>
+                      <span class="chip">Timing</span>
+                      <span class="chip">Feedback</span>
+                      <span class="chip">Tuning</span>
+                  </div>
+              </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+              <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                  <img src="gifs/arthouse-shifters.gif"
+                       alt="Enemy behavior iteration for Shifters"
+                       class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-3">
+                  <h4 class="text-lg font-semibold">Enemy Behavior Iteration (Shifters)</h4>
+                  <p class="text-gray-300 leading-relaxed">
+                      Iterated on enemy behavior scripts to improve clarity and consistency during encounters, adjusting reactions and transitions
+                      so enemies feel intentional rather than unpredictable during late-stage polish.
+                  </p>
+                  <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                      <li>Adjusted behavior transitions and detection/response logic</li>
+                      <li>Tuned reactions to reduce confusing or “unfair” moments</li>
+                      <li>Worked with design goals to match intended difficulty</li>
+                      <li>Fixed behavior edge cases discovered during playtests</li>
+                  </ul>
+                  <div class="chip-row">
+                      <span class="chip">AI/Behavior</span>
+                      <span class="chip">Design Iteration</span>
+                      <span class="chip">Debugging</span>
+                      <span class="chip">Gameplay Systems</span>
+                  </div>
+              </div>
+          </article>
+      </section>
+
+      <section class="rounded-xl border border-gray-800 p-5 bg-[#0f1115] space-y-2">
+          <h3 class="text-2xl font-semibold">Technical Summary</h3>
+          <p class="text-gray-300 leading-relaxed">
+              Art House demonstrates collaborative gameplay engineering in a large-scale Unity production environment, focusing on interactive obstacle systems, enemy behavior scripting, and large-volume bug fixing within a narrative-driven puzzle experience.
+          </p>
+      </section>
+
+      <!-- My Contributions -->
+      <section class="space-y-4">
+          <h3 class="text-2xl font-semibold">My Contributions</h3>
+          <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
+              <li>
+                  Fixed <span class="text-white font-semibold">50+ player-facing bugs</span> reported from playtests and Linear tasks, improving stability
+                  and reducing blockers across multiple scenes during frequent content updates.
+              </li>
+              <li>
+                  Prototyped and implemented <span class="text-white font-semibold">obstacle mechanics</span> (including portal-style rifts and lightning hazards), painting mechanic,
+                  tuning readability, timing, and feel through designer iteration.
+              </li>
+              <li>
+                  Iterated on <span class="text-white font-semibold">enemy behavior scripts</span> (especially Shifters) to improve encounter clarity and consistency
+                  based on feedback and late-stage polish needs.
+              </li>
+              <li>
+                  Collaborated with design and QA to align implementation with intended gameplay goals and validate changes throughout iteration.
+              </li>
+          </ul>
+      </section>
+  </main>
+
+  <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+  </footer>
 </body>
 </html>
