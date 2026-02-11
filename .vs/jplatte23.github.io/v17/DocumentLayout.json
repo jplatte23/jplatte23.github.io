@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\themine.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:themine.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\deepcontainment.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:deepcontainment.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\bookstore.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bookstore.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +50,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "themine.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\themine.html",
+              "RelativeDocumentMoniker": "themine.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\themine.html",
+              "RelativeToolTip": "themine.html",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACgAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-11T22:51:01.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "deepcontainment.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\deepcontainment.html",
+              "RelativeDocumentMoniker": "deepcontainment.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\deepcontainment.html",
+              "RelativeToolTip": "deepcontainment.html",
+              "ViewState": "AgIAABMAAAAAz0Z9Z8MgwBUBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-11T21:50:26.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "arthouse.html",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\arthouse.html",
               "RelativeDocumentMoniker": "arthouse.html",
@@ -50,12 +84,11 @@
               "RelativeToolTip": "arthouse.html",
               "ViewState": "AgIAACkAAAAAAAAAAAD4v08AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-02-11T01:33:49.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T01:33:49.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "summit.html",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\summit.html",
               "RelativeDocumentMoniker": "summit.html",
@@ -67,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\styles.css",
               "RelativeDocumentMoniker": "styles.css",
@@ -79,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -91,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "bookstore.html",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\bookstore.html",
               "RelativeDocumentMoniker": "bookstore.html",
@@ -104,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "code.html",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\website\\jplatte23.github.io\\code.html",
               "RelativeDocumentMoniker": "code.html",
