@@ -1,68 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jason Platte Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg-black text-white">
 
-    <header class="py-6 text-center relative shadow-lg"
-            style="background-color:#202123;">
-        <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
 
-        <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
-            <a href="index.html" class="nav-link nav-glow">Games</a>
-            <a href="code.html" class="nav-link nav-glow">Code</a>
-            <a href="about.html" class="nav-link nav-glow">About</a>
-        </nav>
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
 
-        <!-- gradient divider line -->
-        <div class="h-px w-full mt-5"
-             style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
-        </div>
+    <div class="h-px w-full mt-5"
+         style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
+
+    <!-- Title -->
+    <header class="text-center space-y-2">
+        <h2 class="text-4xl font-extrabold tracking-tight">The Mine (WIP)</h2>
+        <p class="text-gray-400">Gameplay Engineer &amp; Designer | Unity, C#, Perforce</p>
     </header>
 
-    <main class="max-w-5xl mx-auto p-8 space-y-8">
-        <h2 class="text-4xl font-bold text-center">The Mine (WIP)</h2>
+    <!-- The Game -->
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">The Game</h3>
 
-        <section class="text-center text-gray-400 space-y-2">
-            <p>Engineer & Designer | Unity, C#, Perforce</p>
-        </section>
+        <p class="text-gray-200 leading-relaxed">
+            A single-player first-person horror game built in Unity, focused on descending through a dangerous mine shaft
+            while being stalked by a Cartoon Cat (SCP). The experience centers on unstable elevator traversal,
+            escalating tension, environmental hazards, and limited player counterplay.
+        </p>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-4">The Game</h3>
-            <div class="gap-10 mb-6">
-                <p>
-                    A horror experience inspired by SCP where you traverse down an elevator in an abandoned mineshaft. You are not alone.
+        <!-- Responsive YouTube embed -->
+        <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
+            <div class="relative w-full" style="padding-top:56.25%;">
+                <iframe class="absolute inset-0 w-full h-full"
+                        src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID?rel=0&modestbranding=1"
+                        title="The Mine gameplay"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
+                <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li><span class="text-white font-semibold">Gameplay Systems:</span> elevator traversal, movement tuning, player counterplay, encounter logic</li>
+                    <li><span class="text-white font-semibold">Enemy Behavior:</span> spider attack pacing, shaft traversal, aggression states, flashbang reactions</li>
+                    <li><span class="text-white font-semibold">Procedural Animation/VFX:</span> spider leg IK, raycast-based surface detection, grapple/tentacle effects</li>
+                    <li><span class="text-white font-semibold">Game Feel:</span> movement audio, camera control, jumpscare timing, post-processing transitions</li>
+                    <li><span class="text-white font-semibold">Tools:</span> Unity, C#, Perforce</li>
+                </ul>
+            </div>
+
+            <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
+                <h4 class="text-lg font-semibold mb-2">Links</h4>
+
+                <a href="https://store.steampowered.com/app/3532010/Art_House/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
+                    px-4 py-3 font-semibold text-white transition shadow"
+                   aria-label="Open The Mine on Steam">
+                    <!-- Steam icon (simple) -->
+                    <img src="icons/steam.svg" alt="" class="w-20 h-20" />
+                </a>
+
+                <a href="YOUR_GITHUB_REPO_LINK"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
+              px-4 py-3 font-semibold text-white transition shadow"
+                   aria-label="Open The Mine source code on GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                    <span>Source Code</span>
+                </a>
+
+                <p class="text-xs text-gray-500 mt-3">
+                    Opens GitHub in a new tab.
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h3 class="text-2xl font-semibold mb-4">My Contributions</h3>
-            <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Implemented core gameplay mechanics such as elevator and player movement / item usage</li>
-                <li>Tuned and programmed audio manager singleton for all sounds</li>
-                <li>Implemented enemy AI with procedurally generated spider legs</li>
-                <li>Designed all in-game environments and cutscene/story elements</li>
-                <li>Created HLSL shaders for pixel posturize and retro effect</li>
-                <li>Game planned to be released on steam.</li>
-            </ul>
-        </section>
+    <!-- Contribution Gallery -->
+    <section class="space-y-5">
+        <div class="flex items-baseline justify-between">
+            <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
+        </div>
 
-    </main>
+        <!-- Card 1 -->
+        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                <img src="gifs/mine-elevator.gif"
+                     alt="Elevator traversal and movement tuning"
+                     class="w-full h-full object-cover" />
+            </div>
 
+            <div class="space-y-3">
+                <h4 class="text-lg font-semibold">
+                    Elevator Traversal &amp; Tension System
+                </h4>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
-        &copy; 2026 Jason Platte. All rights reserved.
-    </footer>
+                <p class="text-gray-300 leading-relaxed">
+                    Engineered a custom elevator traversal system designed to make vertical movement feel heavy, unstable,
+                    and dangerous. The system uses asymmetric acceleration, braking, slip behavior, and layered movement audio
+                    to create tension during the descent.
+                </p>
 
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Asymmetric acceleration and braking for weighty elevator movement</li>
+                    <li>Slip behavior to create moments of instability during traversal</li>
+                    <li>Layered movement audio to reinforce mechanical strain</li>
+                    <li>Tuning focused on tension, readability, and player anticipation</li>
+                </ul>
+
+                <div class="chip-row">
+                    <span class="chip">Gameplay Systems</span>
+                    <span class="chip">Traversal</span>
+                    <span class="chip">Game Feel</span>
+                    <span class="chip">Audio Feedback</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                <img src="gifs/mine-spider.gif"
+                     alt="Spider encounter behavior"
+                     class="w-full h-full object-cover" />
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-lg font-semibold">
+                    Spider Encounter System
+                </h4>
+
+                <p class="text-gray-300 leading-relaxed">
+                    Built a state-driven spider encounter system that controls shaft traversal, attack pacing,
+                    aggression logic, flashbang counterplay, and kill-state handling. The goal was to create pressure
+                    while preserving enough readability for the player to react.
+                </p>
+
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Lightweight state machine for movement, attacking, and paused behavior</li>
+                    <li>Attack pacing and randomized timing to reduce scripted-feeling encounters</li>
+                    <li>Flashbang counterplay that temporarily interrupts and repositions the spider</li>
+                    <li>Kill-volume gating to prevent unfair instant deaths and overlap edge cases</li>
+                </ul>
+
+                <div class="chip-row">
+                    <span class="chip">Enemy AI</span>
+                    <span class="chip">State Machine</span>
+                    <span class="chip">Counterplay</span>
+                    <span class="chip">Encounter Design</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                <img src="gifs/mine-ik-vfx.gif"
+                     alt="Procedural spider IK and grapple effects"
+                     class="w-full h-full object-cover" />
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-lg font-semibold">
+                    Procedural Spider IK &amp; Grapple VFX
+                </h4>
+
+                <p class="text-gray-300 leading-relaxed">
+                    Developed procedural spider leg IK and grapple/tentacle effects to make creature movement feel more grounded
+                    and reactive inside the mine shaft. The systems use raycasts, curved line rendering, and wall attachment logic
+                    to create dynamic contact with the environment.
+                </p>
+
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Raycast-based surface detection for leg and grapple attachment points</li>
+                    <li>Curved line rendering for tentacle/grapple-style visual effects</li>
+                    <li>Procedural placement to make creature motion react to the environment</li>
+                    <li>Tuning focused on readability during fast-paced encounter moments</li>
+                </ul>
+
+                <div class="chip-row">
+                    <span class="chip">Procedural Animation</span>
+                    <span class="chip">IK</span>
+                    <span class="chip">VFX</span>
+                    <span class="chip">Raycasting</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
+            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
+                <img src="gifs/mine-cinematics.gif"
+                     alt="Cinematic horror sequences"
+                     class="w-full h-full object-cover" />
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-lg font-semibold">
+                    Cinematic Horror Sequences
+                </h4>
+
+                <p class="text-gray-300 leading-relaxed">
+                    Created scripted gameplay sequences using triggers, camera control, animation/audio events,
+                    and post-processing transitions to support horror pacing and key story moments.
+                </p>
+
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Trigger-driven sequences for controlled in-game horror events</li>
+                    <li>Camera behavior, animation timing, and audio cues for scene pacing</li>
+                    <li>Post-processing transitions to strengthen presentation and mood</li>
+                    <li>Integrated cinematic moments while maintaining player context</li>
+                </ul>
+
+                <div class="chip-row">
+                    <span class="chip">Cinematics</span>
+                    <span class="chip">Camera Control</span>
+                    <span class="chip">Horror Design</span>
+                    <span class="chip">Polish</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="rounded-xl border border-gray-800 p-5 bg-[#0f1115] space-y-2">
+        <h3 class="text-2xl font-semibold">Technical Summary</h3>
+        <p class="text-gray-300 leading-relaxed">
+            The Mine demonstrates gameplay systems engineering in a single-player horror environment, combining custom traversal feel,
+            enemy encounter behavior, procedural creature animation, VFX, and cinematic event scripting to create tension through
+            mechanics, feedback, and environmental instability.
+        </p>
+    </section>
+
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">My Contributions</h3>
+        <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
+            <li>
+                Engineered a <span class="text-white font-semibold">custom elevator traversal system</span> with asymmetric acceleration,
+                braking, slip behavior, and layered movement audio to make traversal feel heavy and risky.
+            </li>
+            <li>
+                Implemented the <span class="text-white font-semibold">spider encounter system</span>, including shaft traversal,
+                attack pacing, aggression logic, flashbang counterplay, and kill-state handling.
+            </li>
+            <li>
+                Built <span class="text-white font-semibold">procedural spider leg IK and grapple/tentacle VFX</span> using raycasts,
+                curved line rendering, and wall attachment logic.
+            </li>
+            <li>
+                Created <span class="text-white font-semibold">cinematic gameplay sequences</span> using triggers, camera control,
+                animation/audio events, and post-processing transitions.
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
 
 </body>
 </html>
