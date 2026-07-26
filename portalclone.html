@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Clone | Jason Platte Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-black text-white">
+
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
+
+    <div class="h-px w-full mt-5"
+         style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-12">
+
+    <header class="text-center space-y-3">
+        <p class="text-sm uppercase tracking-widest text-green-400">Technical Project</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Portal Clone</h2>
+        <p class="text-gray-400">Custom C++ Engine | SDL | OpenGL</p>
+    </header>
+
+    <section class="media-frame media-16x9 rounded-xl border border-gray-800 bg-black shadow-lg portal-video-frame media-slot">
+        <video class="portal-demo-video w-full h-full object-cover"
+               controls
+               muted
+               playsinline
+               preload="metadata">
+            <!-- Add your 30 second demo here. -->
+            <source src="videos/portalclone.mp4" type="video/mp4" />
+        </video>
+        <div class="portal-video-placeholder media-slot-placeholder">
+            <div class="portal-rings" aria-hidden="true"></div>
+            <p class="text-sm uppercase tracking-widest text-gray-400">30-second engine demo</p>
+            <p class="text-2xl md:text-3xl font-extrabold text-white">Portal Rendering Prototype</p>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2 panel">
+            <h3 class="text-2xl font-semibold mb-3">Overview</h3>
+            <p class="text-gray-300 leading-relaxed">
+                A Portal clone built in a custom C++ engine using SDL and OpenGL. The project combines first-person controls, portal placement, portal view rendering, teleportation, puzzle actors, turret AI, lasers, health, and audio feedback into a Portal-style test environment.
+            </p>
+        </div>
+
+        <div class="panel">
+            <h3 class="text-2xl font-semibold mb-3">Tech Stack</h3>
+            <div class="chip-row">
+                <span class="chip tech-chip tech-cpp">C++</span>
+                <span class="chip tech-chip tech-sdl">SDL</span>
+                <span class="chip tech-chip tech-opengl">OpenGL</span>
+                <span class="chip tech-chip tech-engine">Custom Engine</span>
+                <span class="chip tech-chip tech-json">JSON Levels</span>
+                <span class="chip tech-chip tech-collision">Collision</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">Technical Highlights</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <article class="panel">
+                <h4 class="text-lg font-semibold">Portal Rendering &amp; Teleportation</h4>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li>Rendered linked portal views through a transformed portal camera.</li>
+                    <li>Converted player and object transforms between paired portal spaces.</li>
+                    <li>Handled portal crossing separately from ordinary wall collision.</li>
+                </ul>
+            </article>
+
+            <article class="panel">
+                <h4 class="text-lg font-semibold">Custom Engine Architecture</h4>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li>Extended an actor/component engine with first-person controls and quaternion transforms.</li>
+                    <li>Loaded level actors, props, collision, puzzles, and portals from JSON data.</li>
+                    <li>Managed level reloads by clearing actors, colliders, sounds, and portal references.</li>
+                </ul>
+            </article>
+
+            <article class="panel">
+                <h4 class="text-lg font-semibold">Puzzle &amp; Interaction Systems</h4>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li>Built energy launchers, energy pellets, catchers, doors, and level reset behavior.</li>
+                    <li>Connected puzzle actors through parented transforms and activation callbacks.</li>
+                    <li>Supported input replay to validate player movement and interaction sequences.</li>
+                </ul>
+            </article>
+
+            <article class="panel">
+                <h4 class="text-lg font-semibold">Turret AI, Lasers &amp; Health</h4>
+                <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                    <li>Implemented turret behavior with idle, priming, firing, search, falling, and death states.</li>
+                    <li>Added laser segments that can damage actors and travel through portals.</li>
+                    <li>Used health callbacks for turret death, player damage, death audio, and feedback.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">System Clips</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/portalclone-portals.gif"
+                         alt="Portal rendering and teleportation gameplay clip" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
+                        <p class="text-xl font-bold">gifs/portalclone-portals.gif</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Portal Rendering</h4>
+                </div>
+            </article>
+
+            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/portalclone-puzzles.gif"
+                         alt="Energy launcher and puzzle interaction clip" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
+                        <p class="text-xl font-bold">gifs/portalclone-puzzles.gif</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Puzzle Actors</h4>
+                </div>
+            </article>
+
+            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/portalclone-turrets.gif"
+                         alt="Turret AI targeting and firing clip" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
+                        <p class="text-xl font-bold">gifs/portalclone-turrets.gif</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Turret AI</h4>
+                </div>
+            </article>
+
+            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/portalclone-lasers.gif"
+                         alt="Laser and damage system clip" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
+                        <p class="text-xl font-bold">gifs/portalclone-lasers.gif</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold">Lasers</h4>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">Turret AI State Machine</h3>
+
+        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
+            <div class="media-frame media-16x9 media-slot">
+                <img src="images/portalclone-turret-state-machine.png"
+                     alt="State machine diagram for Portal Clone turret AI" />
+                <div class="media-slot-placeholder">
+                    <p class="text-sm uppercase tracking-widest text-gray-400">Diagram slot</p>
+                    <p class="text-xl font-bold">images/portalclone-turret-state-machine.png</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-lg font-semibold">Interruptible Behavior Logic</h4>
+                <p class="text-gray-300 leading-relaxed">
+                    Turrets use a finite state machine to manage target acquisition, priming, firing, searching, falling, and death. Portal collision can interrupt any active behavior state, which kept displacement logic centralized instead of scattered across every AI branch.
+                </p>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-state">FSM</span>
+                    <span class="chip tech-chip tech-ai">AI</span>
+                    <span class="chip tech-chip tech-interrupts">Interrupts</span>
+                    <span class="chip tech-chip tech-collision">Portal Collision</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="space-y-4">
+        <h3 class="text-2xl font-semibold">Interesting Challenges</h3>
+
+        <div class="space-y-4">
+            <article class="feature-card p-5 rounded-xl border border-gray-800">
+                <h4 class="text-lg font-semibold">Portal View Alignment</h4>
+                <p class="text-gray-300 leading-relaxed mt-2">
+                    The portal camera needed to preserve the player's relative position and orientation across a linked portal pair, so the view through the portal felt spatially continuous instead of like a disconnected render target.
+                </p>
+            </article>
+
+            <article class="feature-card p-5 rounded-xl border border-gray-800">
+                <h4 class="text-lg font-semibold">Portal-Aware Collision</h4>
+                <p class="text-gray-300 leading-relaxed mt-2">
+                    Collision rules had to distinguish between approaching a portal, looking through its surface, and actually crossing its plane while avoiding jitter or repeated teleport triggers.
+                </p>
+            </article>
+
+            <article class="feature-card p-5 rounded-xl border border-gray-800">
+                <h4 class="text-lg font-semibold">Clean Level Reloads</h4>
+                <p class="text-gray-300 leading-relaxed mt-2">
+                    Reloading a level required clearing actor lists, collision references, portal links, input playback, sounds, and temporary state so repeated test runs behaved consistently.
+                </p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.media-slot').forEach((slot) => {
+            const media = slot.querySelector('video, img');
+
+            if (!media) return;
+
+            const markLoaded = () => {
+                slot.classList.add('media-loaded');
+            };
+
+            const markMissing = () => {
+                media.classList.add('media-missing');
+            };
+
+            if (media.tagName === 'VIDEO') {
+                media.addEventListener('loadeddata', markLoaded);
+                media.addEventListener('error', markMissing);
+            } else {
+                media.addEventListener('load', markLoaded);
+                media.addEventListener('error', markMissing);
+                if (media.complete && media.naturalWidth > 0) markLoaded();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
