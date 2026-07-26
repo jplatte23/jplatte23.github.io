@@ -51,21 +51,22 @@
             Wielderless is a 1-4 player co-op action roguelite where players are cursed weapons searching for bodies to wield them. Players begin each run in weapon form, crawling through a hostile village, luring compatible hosts, possessing their bodies, and fighting to grow strong enough to defeat the village champion.
         </p>
         <p class="text-gray-200 leading-relaxed">
-            The core fantasy is that the player is not the hero holding the weapon. The player is the weapon. Hosts are temporary bodies, and losing one sends the player back into vulnerable weapon form.
+            The core fantasy is that the player is not the hero holding the weapon. The player is the weapon. Hosts are temporary bodies, and losing one sends the player back into vulnerable weapon form. Wielderless is Risk of Rain meets V Rising. Play as cursed sentient weapons, possess powerful hosts instead of collecting loot, and fight through increasingly dangerous stages in co-op.
         </p>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="md:col-span-2 panel">
-            <h3 class="text-2xl font-semibold mb-3">My Role</h3>
-            <p class="text-gray-300 leading-relaxed">
-                I am building the prototype's player-facing systems, multiplayer flow, possession loop, NPC interaction mechanics, and combat feedback. The current focus is proving the core loop in networked play: find a host, test compatibility, lure or possess them, fight through encounters, then survive when the host is lost.
-            </p>
-        </div>
+    <div class="md:col-span-2 panel">
+        <h3 class="text-2xl font-semibold mb-3">My Role</h3>
+        <p class="text-gray-300 leading-relaxed">
+            I am building the prototype's player-facing systems, multiplayer flow, possession loop, NPC interaction mechanics, and combat feedback. The current focus is proving the core loop in networked play: find a host, test compatibility, lure or possess them, fight through encounters, then survive when the host is lost.
+        </p>
+    </div>
 
-        <div class="panel">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <div class="md:col-span-2 panel">
             <h3 class="text-2xl font-semibold mb-3">Technical Focus</h3>
-            <ul class="text-gray-300 space-y-2 text-sm">
+            <ul class="text-gray-300 space-y-2 list-disc list-inside">
                 <li>Steam session hosting/joining</li>
                 <li>Replicated possession and host control</li>
                 <li>Physics-based weapon movement</li>
@@ -75,6 +76,30 @@
                 <li>Greybox map and encounter prototyping</li>
             </ul>
         </div>
+
+        <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
+            <h4 class="text-lg font-semibold mb-2">Links</h4>
+            <a href="https://www.instagram.com/nolinkstudios/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
+                        px-4 py-3 font-semibold text-white transition shadow"
+               aria-label="Open Art House on Steam">
+                <!-- Insta icon -->
+                <img src="icons/instagram.svg" alt="" class="w-20 h-20" />
+            </a>
+            <a href="https://github.com/jplatte23/WielderlessCodeSamples"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
+              px-4 py-3 font-semibold text-white transition shadow"
+               aria-label="Open Wielderless source code on GitHub">
+                <i class="fab fa-github text-2xl"></i>
+                <span>Source Code</span>
+            </a>
+        </div>
+        
+        
     </section>
 
     <section class="space-y-4">
