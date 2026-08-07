@@ -26,96 +26,107 @@
     </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-12">
+<main class="wl-page mx-auto px-6 md:px-10">
+    <nav class="wl-jump-nav" aria-label="Wielderless page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#loop">Core Loop</a>
+        <a href="#ownership">Contributions</a>
+        <a href="#deep-dives">Core Systems</a>
+        <a href="#technical-design">Technical Design</a>
+        <a href="#lessons">Lessons</a>
+    </nav>
 
-    <header class="text-center space-y-3">
-        <p class="text-sm uppercase tracking-widest text-green-400">In-Development Co-op Prototype</p>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Wielderless</h2>
-        <p class="text-gray-400">Gameplay Engineer &amp; Designer | Unreal Engine 5.6, C++, Steam Multiplayer, Perforce</p>
-    </header>
+    <section id="overview" class="wl-hero">
+        <div class="wl-hero-copy">
+            <p class="wl-kicker">In-development co-op prototype</p>
+            <h2>Wielderless</h2>
+            <p class="wl-hook">
+                A 1-4 player co-op action roguelite where players are cursed weapons hunting for temporary bodies to possess.
+            </p>
+            <p class="wl-mantra">Your body is temporary. Your weapon is permanent.</p>
+            <p class="wl-hero-body">
+                Risk of Rain meets V Rising, but the player is the weapon. Each run is about crawling through danger in weapon form, reading NPC hosts for compatibility, luring the right body close enough to possess, and surviving when that body eventually breaks.
+            </p>
+            <p class="wl-meta-line">
+                Gameplay engineer and designer on a 2-person Unreal Engine 5.6 C++ prototype with Steam multiplayer.
+            </p>
+            <div class="wl-links">
+                <a href="https://www.instagram.com/nolinkstudios/" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless project updates on Instagram">
+                    <img src="icons/instagram.svg" alt="" />
+                    <span>Updates</span>
+                </a>
+                <a href="https://github.com/jplatte23/WielderlessCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless code samples on GitHub">
+                    <img src="icons/github.svg" alt="" />
+                    <span>Code</span>
+                </a>
+            </div>
+        </div>
 
-    <section class="media-frame media-16x9 rounded-xl border border-gray-800 bg-black shadow-lg">
-        <video class="w-full h-full object-cover"
-               controls
-               muted
-               playsinline
-               poster="images/Wielderless.png">
-            <source src="videos/wielderlessdemo.mp4" type="video/mp4" />
-        </video>
+        <div class="wl-hero-media">
+            <video controls autoplay muted loop playsinline poster="images/Wielderless.png">
+                <source src="videos/wielderlessdemo.mp4" type="video/mp4" />
+            </video>
+            <p class="wl-caption">Current prototype: weapon movement, scan/lure interaction, charm and possession flow, host combat, and multiplayer testing.</p>
+        </div>
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">The Game</h3>
-
-        <p class="text-gray-200 leading-relaxed">
-            Wielderless is a 1-4 player co-op action roguelite where players are cursed weapons searching for bodies to wield them. Players begin each run in weapon form, crawling through a hostile village, luring compatible hosts, possessing their bodies, and fighting to grow strong enough to defeat the village champion.
-        </p>
-        <p class="text-gray-200 leading-relaxed">
-            The core fantasy is that the player is not the hero holding the weapon. The player is the weapon. Hosts are temporary bodies, and losing one sends the player back into vulnerable weapon form. Wielderless is Risk of Rain meets V Rising. Play as cursed sentient weapons, possess powerful hosts instead of collecting loot, and fight through increasingly dangerous stages in co-op.
-        </p>
-    </section>
-
-    <div class="md:col-span-2 panel">
-        <h3 class="text-2xl font-semibold mb-3">My Role</h3>
-        <p class="text-gray-300 leading-relaxed">
-            I am building the prototype's player-facing systems, multiplayer flow, possession loop, NPC interaction mechanics, and combat feedback. The current focus is proving the core loop in networked play: find a host, test compatibility, lure or possess them, fight through encounters, then survive when the host is lost.
-        </p>
-    </div>
-
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-        <div class="md:col-span-2 panel">
-            <h3 class="text-2xl font-semibold mb-3">Technical Focus</h3>
-            <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                <li>Steam session hosting/joining</li>
-                <li>Replicated possession and host control</li>
-                <li>Physics-based weapon movement</li>
-                <li>NPC scan, lure, and compatibility systems</li>
-                <li>Reticle-based host combat</li>
-                <li>Niagara VFX and gameplay feedback</li>
-                <li>Greybox map and encounter prototyping</li>
+    <section id="ownership" class="wl-section wl-accent-role">
+        <div class="wl-contribution-panel">
+            <h3>Main Contributions</h3>
+            <ul>
+                <li><strong>Created weapon-form movement</strong> with physics impulses, glow buildup, burst feedback, impact audio, and Niagara effects.</li>
+                <li><strong>Implemented networked possession</strong> so control can move from weapon form into a host, between hosts, and back to weapon form after death or sacrifice.</li>
+                <li><strong>Built NPC scan, lure, charm, possess, and consume interactions</strong> so choosing a host became a readable gameplay decision instead of grabbing the nearest body.</li>
+                <li><strong>Added Steam session and lobby-code flow</strong> for hosting, joining, direct lobby lookup, and multiplayer prototype testing.</li>
+                <li><strong>Developed host combat feedback</strong> including light attacks, combat roll, reticle-directed melee, swing VFX, hit feedback, and combat audio hooks.</li>
             </ul>
         </div>
-
-        <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-            <h4 class="text-lg font-semibold mb-2">Links</h4>
-            <a href="https://www.instagram.com/nolinkstudios/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
-                        px-4 py-3 font-semibold text-white transition shadow"
-               aria-label="Open Art House on Steam">
-                <!-- Insta icon -->
-                <img src="icons/instagram.svg" alt="" class="w-20 h-20" />
-            </a>
-            <a href="https://github.com/jplatte23/WielderlessCodeSamples"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
-              px-4 py-3 font-semibold text-white transition shadow"
-               aria-label="Open Wielderless source code on GitHub">
-                <i class="fab fa-github text-2xl"></i>
-                <span>Source Code</span>
-            </a>
-        </div>
-        
-        
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Core Systems</h3>
+    <section id="loop" class="wl-section wl-two-col wl-accent-loop">
+        <div>
+            <p class="wl-kicker">The game</p>
+            <h3>Wielderless is about finding, inhabiting, losing, and replacing bodies.</h3>
+            <p>
+                Possession is not a side mechanic. It is the survival loop. Weapon form is vulnerable but still playable, hosts are useful but temporary, and the player is constantly deciding when to scout, lure, charm, possess, fight, sacrifice, or retreat.
+            </p>
+        </div>
+        <div class="wl-loop">
+            <div><span>01</span><strong>Move as a weapon</strong><p>Use physics-driven movement to reposition while vulnerable.</p></div>
+            <div><span>02</span><strong>Scan hosts</strong><p>Reveal a 1-100% compatibility roll before committing to a target.</p></div>
+            <div><span>03</span><strong>Lure and weaken</strong><p>Tether a target, drain it toward the 30% HP weakened threshold, then choose possess or consume.</p></div>
+            <div><span>04</span><strong>Fight as the host</strong><p>Use the temporary body for light attacks, combat roll, and reticle-directed melee.</p></div>
+            <div><span>05</span><strong>Return to weapon form</strong><p>Host death or sacrifice sends the player back into the recovery loop.</p></div>
+        </div>
+    </section>
 
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 rounded-lg border border-gray-800 bg-black">
-                <img src="gifs/wielderless-wep.gif"
-                     alt="Weapon form movement gameplay placeholder"
-                     class="w-full h-full object-cover" />
+    <section class="wl-section wl-principle wl-accent-compat">
+        <p class="wl-kicker">Why the system is different</p>
+        <h3>Host Choice Replaces Loot</h3>
+        <p>
+            In most roguelites, players look for a better weapon. In Wielderless, the player is the weapon, so the core decision becomes finding a better body. Compatibility is stored on hosts, revealed through scan/lure feedback, and currently scales possessed host health, damage, and movement speed.
+        </p>
+        <div class="wl-compat-strip" aria-label="Compatibility roll summary">
+            <span><strong>1%</strong> low roll</span>
+            <span><strong>50%</strong> mid roll</span>
+            <span><strong>90%</strong> high roll</span>
+            <span><strong>100%</strong> max roll</span>
+        </div>
+    </section>
+
+    <section id="deep-dives" class="wl-section wl-accent-systems">
+        <p class="wl-kicker">Core systems</p>
+        <h3>The main systems are easiest to understand in motion.</h3>
+
+        <article class="wl-deep-dive wl-system-weapon">
+            <div class="wl-media">
+                <img src="gifs/wielderless-wep.gif" alt="Weapon form movement gameplay" />
             </div>
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Weapon Form Movement</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    Weapon form uses physics impulses to make the player feel like a cursed object forcing itself to move. The weapon builds a glow as it begins moving, then bursts forward with force, sound, and Niagara VFX. The goal is to make weapon form feel vulnerable but alive rather than like a passive downed state.
-                </p>
+            <div class="wl-system-text">
+                <p class="wl-system-number">01</p>
+                <h4>Weapon Form Movement</h4>
+                <p class="wl-problem">Weapon form needed to feel vulnerable but alive, not like a passive downed state. I built impulse-driven movement with jump/burst feedback, metal impact audio, weapon-form UI, and Niagara VFX so players still have agency while searching for a host.</p>
+                <p>The main tuning challenge was keeping the physics expressive without making it too chaotic or too easy to control, especially once multiplayer consistency became part of the prototype.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-physics">Physics</span>
                     <span class="chip tech-chip tech-vfx">Niagara</span>
@@ -124,17 +135,15 @@
             </div>
         </article>
 
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 rounded-lg border border-gray-800 bg-black">
-                <img src="gifs/wielderless-scan.gif"
-                     alt="Scan ability revealing NPC compatibility billboards"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-reverse wl-system-compat">
+            <div class="wl-media">
+                <img src="gifs/wielderless-scan.gif" alt="Scan ability revealing NPC compatibility" />
             </div>
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Host Compatibility &amp; Scan</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    NPCs have compatibility values that can be revealed with a scan ability. Compatibility creates the host-hunting loop, encouraging players to search for stronger bodies instead of treating NPCs only as enemies.
-                </p>
+            <div class="wl-system-text">
+                <p class="wl-system-number">02</p>
+                <h4>NPC Compatibility &amp; Scan</h4>
+                <p class="wl-problem">Without information, possession turns into grabbing the nearest NPC. The scan system gives players a reason to evaluate targets by revealing compatibility before they commit to a body.</p>
+                <p>Compatibility turns host choice into the prototype's version of loot evaluation: a host archetype and its compatibility roll both affect how useful that body becomes after possession.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-ai">NPC Data</span>
                     <span class="chip tech-chip tech-ui">World UI</span>
@@ -143,114 +152,166 @@
             </div>
         </article>
 
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 rounded-lg border border-gray-800 bg-black">
-                <img src="gifs/wielderless-lure.gif"
-                     alt="Lure system gameplay placeholder"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-system-lure">
+            <div class="wl-media">
+                <img src="gifs/wielderless-lure.gif" alt="Lure system attracting NPCs" />
             </div>
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Lure System</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    In weapon form, players can lure nearby NPCs toward the weapon. The next iteration is a targeted tether system where players aim at a specific host, attempt to charm them, and then possess them if the lure succeeds.
-                </p>
+            <div class="wl-system-text">
+                <p class="wl-system-number">03</p>
+                <h4>Lure System</h4>
+                <p class="wl-problem">Weapon-form players need agency before possession, not just a hope that an NPC wanders close enough. The lure lets the weapon deliberately pull a target into a risky setup phase.</p>
+                <p>I built projectile/tether behavior, percentage-based tether damage, and a weakened/charmed transition where the host can follow the weapon and unlock possess or consume options.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-ai">AI Behavior</span>
-                    <span class="chip tech-chip tech-ai">Targeting</span>
+                    <span class="chip tech-chip tech-interaction">Interaction</span>
+                    <span class="chip tech-chip tech-iteration">Iteration</span>
                 </div>
             </div>
         </article>
 
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 rounded-lg border border-gray-800 bg-black">
-                <img src="gifs/wielderless-host.gif"
-                     alt="Possession gameplay placeholder"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-reverse wl-system-possession">
+            <div class="wl-media">
+                <img src="gifs/wielderless-host.gif" alt="Possession and host control" />
             </div>
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Possession</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    Players can take control of NPC hosts, switching from vulnerable weapon form into a temporary body. Host possession is designed as the central state change of the game.
-                </p>
+            <div class="wl-system-text">
+                <p class="wl-system-number">04</p>
+                <h4>Possession &amp; Host Control</h4>
+                <p class="wl-problem">Possession is the moment where the fantasy has to land: the weapon becomes the wielder. I implemented the transition from weapon form into host control, including the weapon flying into the host's hand.</p>
+                <p>The hard part is that this is not just a visual swap. Movement, camera intent, combat availability, player feedback, and replicated state all change when control moves into a host.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-state">State Change</span>
+                    <span class="chip tech-chip tech-network">Replication</span>
+                    <span class="chip tech-chip tech-gameplay">Core Loop</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-system-network">
+            <div class="wl-media">
+                <img src="gifs/wielderless-mp.gif" alt="Steam multiplayer session testing" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">05</p>
+                <h4>Steam Multiplayer &amp; Replicated Flow</h4>
+                <p class="wl-problem">Because Wielderless is designed around co-op, I wanted multiplayer pressure on the prototype early. I added Steam sessions, lobby codes, session hosting/joining, direct lobby lookup, and replication for the core possession and combat interactions.</p>
+                <p>This forced ownership questions early: who owns the form change, which state must replicate, and how much presentation can happen locally without lying about gameplay truth?</p>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-steam">Steam</span>
+                    <span class="chip tech-chip tech-network">Sessions</span>
                     <span class="chip tech-chip tech-network">Replication</span>
                 </div>
             </div>
         </article>
 
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 rounded-lg border border-gray-800 bg-black">
-                <img src="gifs/wielderless-mp.gif"
-                     alt="Steam multiplayer gameplay placeholder"
-                     class="w-full h-full object-cover" />
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Steam Multiplayer</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    The prototype supports Steam session hosting and joining through session lists and join codes. Core interactions including scanning, luring, possession, weapon movement, and host combat are functional in multiplayer.
-                </p>
+        <article class="wl-deep-dive wl-text-only wl-system-combat">
+            <div class="wl-system-text">
+                <p class="wl-system-number">06</p>
+                <h4>Combat Feedback</h4>
+                <p class="wl-problem">Host combat needs to feel like the reward for surviving weapon form. I added host light attack, combat roll, swing arc VFX, blood/hit feedback, combat sounds, reticle-directed melee, and temporary reticle-facing behavior after attacks.</p>
+                <p>The goal was readability: after a form change, players need clear attack direction, timing, and impact feedback immediately.</p>
                 <div class="chip-row">
-                    <span class="chip tech-chip tech-steam">Steam</span>
-                    <span class="chip tech-chip tech-network">Sessions</span>
-                    <span class="chip tech-chip tech-network">Co-op</span>
+                    <span class="chip tech-chip tech-gameplay">Combat</span>
+                    <span class="chip tech-chip tech-vfx">Attack VFX</span>
+                    <span class="chip tech-chip tech-ui">Reticle</span>
+                    <span class="chip tech-chip tech-feedback">Feedback</span>
                 </div>
             </div>
         </article>
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Development Log</h3>
+    <section id="technical-design" class="wl-section wl-accent-architecture">
+        <p class="wl-kicker">Technical challenge</p>
+        <h3>The player isn't a character.</h3>
+        <p class="wl-architecture-intro">
+            Player identity moves between different replicated actors. That means possession changes controller ownership, movement, camera, HUD, abilities, combat, animation, and networking. The challenge was not possession itself; it was preserving player intent while all of those systems changed underneath them.
+        </p>
 
-        <div class="space-y-4">
-            <article class="panel">
-                <h4 class="text-lg font-semibold">June 2026 - Prototype Foundation</h4>
-                <ul class="list-disc list-inside text-gray-300 space-y-2 mt-3">
-                    <li>Set up Unreal 5.6 project structure and Perforce workflow.</li>
-                    <li>Implemented Steam session hosting and joining through session list and join code.</li>
-                    <li>Created the first version of weapon-form movement using physics impulses.</li>
-                    <li>Added movement glow, burst sound, jump Niagara VFX, and metal impact audio.</li>
-                </ul>
-            </article>
+        <article class="wl-arch-map">
+            <div class="wl-diagram-head">
+                <h4>Possession Lifecycle</h4>
+                <p>The core loop players repeat across a run: search for a host, take control, fight, lose the host, and recover.</p>
+            </div>
+            <div class="wl-gameplay-loop" aria-label="Wielderless possession gameplay loop diagram">
+                <div class="wl-loop-node weapon">
+                    <span>Start</span>
+                    <strong>Weapon Form</strong>
+                    <small>Physics movement, vulnerable positioning, scan/lure tools.</small>
+                </div>
+                <div class="wl-loop-arrow">scan nearby NPCs</div>
+                <div class="wl-loop-node scan">
+                    <span>Decision</span>
+                    <strong>Compatible Host?</strong>
+                    <small>Compatibility makes host choice part of the prototype's risk/reward loop.</small>
+                </div>
+                <div class="wl-loop-split">
+                    <div class="wl-loop-path muted">
+                        <span>No</span>
+                        <strong>Keep Exploring</strong>
+                        <small>Stay in weapon form and search for a better body.</small>
+                    </div>
+                    <div class="wl-loop-path active">
+                        <span>Yes</span>
+                        <strong>Lure and Weaken</strong>
+                        <small>Tether the target until it can be charmed.</small>
+                    </div>
+                </div>
+                <div class="wl-loop-arrow">possess host</div>
+                <div class="wl-loop-node host">
+                    <span>Payoff</span>
+                    <strong>Host Combat</strong>
+                    <small>Movement, attacks, camera, HUD, and abilities swap to host form.</small>
+                </div>
+                <div class="wl-loop-split">
+                    <div class="wl-loop-path active">
+                        <span>Host Lives</span>
+                        <strong>Continue Encounter</strong>
+                        <small>Fight, reposition, or transfer into a better host.</small>
+                    </div>
+                    <div class="wl-loop-path danger">
+                        <span>Host Dies</span>
+                        <strong>Return to Weapon</strong>
+                        <small>Eject back to weapon form, or break if integrity reaches zero.</small>
+                    </div>
+                </div>
+            </div>
+            <p class="wl-diagram-caption">
+                The engineering challenge was keeping this loop stable while the player's controlled actor changes. Possession has to preserve player intent while swapping movement, camera, HUD, abilities, combat rules, animation state, and replicated gameplay state.
+            </p>
+        </article>
 
-            <article class="panel">
-                <h4 class="text-lg font-semibold">June 2026 - NPC Scan, Lure, and Possession</h4>
-                <ul class="list-disc list-inside text-gray-300 space-y-2 mt-3">
-                    <li>Added roaming NPCs that spawn and patrol the greybox village.</li>
-                    <li>Implemented scan ability that reveals compatibility through world-space billboards.</li>
-                    <li>Added lure behavior allowing weapon-form players to attract nearby NPCs.</li>
-                    <li>Implemented multiplayer-safe NPC possession and host control.</li>
-                </ul>
-            </article>
-
-            <article class="panel">
-                <h4 class="text-lg font-semibold">June 2026 - Host Combat</h4>
-                <ul class="list-disc list-inside text-gray-300 space-y-2 mt-3">
-                    <li>Added possessed host melee attacks.</li>
-                    <li>Created directional arc VFX for attacks.</li>
-                    <li>Implemented reticle-based attack direction inspired by V Rising.</li>
-                    <li>Added temporary reticle-facing behavior after attacks.</li>
-                </ul>
-            </article>
+        <div class="wl-challenge-strip" aria-label="Possession engineering challenges">
+            <span>Controller transfer</span>
+            <span>Camera ownership</span>
+            <span>HUD ownership</span>
+            <span>Ability swapping</span>
+            <span>Replication</span>
+            <span>Animation state</span>
         </div>
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Next Milestones</h3>
-
-        <div class="panel">
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
-                <li>Implement targeted lure tether with success/failure feedback</li>
-                <li>Add charmed host state and Hold E possession prompt</li>
-                <li>Add host death effects and weapon ejection</li>
-                <li>Add weapon integrity and lose condition</li>
-                <li>Add host kill effects and host healing</li>
-                <li>Create first village champion encounter</li>
-                <li>Build a complete 5-10 minute co-op prototype loop</li>
-            </ul>
+    <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
+        <p class="wl-kicker">Lessons learned</p>
+        <h3>Lessons Learned</h3>
+        <p class="wl-lessons-intro">What Wielderless taught me.</p>
+        <div>
+            <blockquote>
+                Networking forced me to define ownership boundaries much earlier than expected.
+                <span>A possession prototype touches player control, AI state, camera behavior, combat, and replication. Waiting to think about ownership would have made every later system harder to reason about.</span>
+            </blockquote>
+            <blockquote>
+                Designing the player fantasy first made later technical decisions easier.
+                <span>Once the fantasy was clear, the engineering questions became sharper: how does a weapon move, how does it choose a host, what does another client need to know, and how does feedback sell the state change?</span>
+            </blockquote>
+            <blockquote>
+                I underestimated how much feedback communicates gameplay state.
+                <span>Glow buildup, Niagara bursts, world-space compatibility UI, attack arcs, reticle behavior, and audio cues are not polish after the fact. They are how players understand the system.</span>
+            </blockquote>
+            <blockquote>
+                Fast prototypes still need clear state boundaries.
+                <span>Wielderless is teaching me to prototype quickly without letting every mechanic become tangled with every other mechanic. The next step is separating stabilized systems into cleaner gameplay components.</span>
+            </blockquote>
         </div>
     </section>
-
 </main>
 
 <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
