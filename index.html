@@ -40,10 +40,10 @@
         </p>
 
         <div class="mt-6 flex flex-wrap justify-center gap-3">
-            <span class="badge tech-chip tech-ai">Gameplay Systems</span>
+            <span class="badge tech-chip tech-gameplay">Gameplay Systems</span>
             <span class="badge tech-chip tech-network">Multiplayer</span>
-            <span class="badge tech-chip tech-network">AI Systems</span>
-            <span class="badge tech-chip tech-network">C++</span>
+            <span class="badge tech-chip tech-ai">AI Systems</span>
+            <span class="badge tech-chip tech-cpp">C++</span>
             <span class="badge tech-chip tech-procgen">Procedural Generation</span>
         </div>
 
@@ -473,9 +473,65 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card: Custom Game Engine -->
+        <a href="enginedesign.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
+            <div class="card-media relative h-48 overflow-hidden engine-card-preview">
+                <img src="images/engine-design.png" alt="Custom Game Engine" class="card-poster w-full h-full object-cover" onerror="this.style.display='none'">
+
+                <video class="card-video absolute inset-0 w-full h-full object-cover"
+                       muted
+                       playsinline
+                       loop
+                       preload="metadata">
+                    <source src="videos/engine-design.mp4" type="video/mp4">
+                </video>
+
+                <div class="card-media-label">
+                    <p>Engine Design</p>
+                </div>
+            </div>
+
+            <div class="p-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-xl font-semibold">Custom Game Engine</h3>
+                    <span class="text-gray-500 text-sm">2025</span>
+                </div>
+
+                <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+                    From-scratch C++ engine project covering rendering, HLSL shaders, animation, collision, profiling, and multithreaded jobs.
+                </p>
+
+                <div class="meta-row">
+                    <span class="meta-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Engine</span>
+                    </span>
+
+                    <span class="meta-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span>Rendering</span>
+                    </span>
+                </div>
+
+                <div class="badges">
+                    <span class="badge tech-chip tech-cpp">C++</span>
+                    <span class="badge tech-chip tech-hlsl">HLSL</span>
+                    <span class="badge tech-chip tech-directx">DirectX</span>
+                    <span class="badge tech-chip tech-rendering">Rendering</span>
+                    <span class="badge tech-chip tech-jobs">Jobs</span>
+                </div>
+            </div>
+        </a>
+
         <!-- Project Card: Portal Clone -->
         <a href="portalclone.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
-            <div class="card-media relative h-48 overflow-hidden">
+            <div class="card-media relative h-48 overflow-hidden portal-card-preview">
                 <img src="images/portalclone.png" alt="Portal Clone" class="card-poster w-full h-full object-cover">
 
                 <video class="card-video absolute inset-0 w-full h-full object-cover"

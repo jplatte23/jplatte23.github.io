@@ -26,41 +26,19 @@
     </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-12">
-
-    <header class="text-center space-y-3">
-        <p class="text-sm uppercase tracking-widest text-green-400">Technical Project</p>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Portal Clone</h2>
-        <p class="text-gray-400">Custom C++ Engine | SDL | OpenGL</p>
-    </header>
-
-    <section class="media-frame media-16x9 rounded-xl border border-gray-800 bg-black shadow-lg portal-video-frame media-slot">
-        <video class="portal-demo-video w-full h-full object-cover"
-               controls
-               muted
-               playsinline
-               preload="metadata">
-            <!-- Add your 30 second demo here. -->
-            <source src="videos/portalclone.mp4" type="video/mp4" />
-        </video>
-        <div class="portal-video-placeholder media-slot-placeholder">
-            <div class="portal-rings" aria-hidden="true"></div>
-            <p class="text-sm uppercase tracking-widest text-gray-400">30-second engine demo</p>
-            <p class="text-2xl md:text-3xl font-extrabold text-white">Portal Rendering Prototype</p>
-        </div>
-    </section>
-
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="md:col-span-2 panel">
-            <h3 class="text-2xl font-semibold mb-3">Overview</h3>
-            <p class="text-gray-300 leading-relaxed">
-                A Portal clone built in a custom C++ engine using SDL and OpenGL. The project combines first-person controls, portal placement, portal view rendering, teleportation, puzzle actors, turret AI, lasers, health, and audio feedback into a Portal-style test environment.
+<main class="case-page">
+    <section class="case-hero">
+        <div>
+            <p class="case-kicker">Technical Project</p>
+            <h2>Portal Clone</h2>
+            <p class="case-hook">
+                A Portal-style prototype built in a custom C++ engine with portal rendering, teleportation, puzzles, turret AI, and portal-aware collision.
             </p>
-        </div>
-
-        <div class="panel">
-            <h3 class="text-2xl font-semibold mb-3">Tech Stack</h3>
-            <div class="chip-row">
+            <p class="case-body">
+                The project focuses on the systems behind convincing portal gameplay: rendering a second space through a portal surface, transforming cameras and actors between linked portals, and keeping gameplay state readable as objects, projectiles, lasers, and AI interact with portals.
+            </p>
+            <p class="case-meta">Custom C++ Engine | SDL | OpenGL</p>
+            <div class="chip-row case-stack">
                 <span class="chip tech-chip tech-cpp">C++</span>
                 <span class="chip tech-chip tech-sdl">SDL</span>
                 <span class="chip tech-chip tech-opengl">OpenGL</span>
@@ -69,167 +47,198 @@
                 <span class="chip tech-chip tech-collision">Collision</span>
             </div>
         </div>
-    </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Technical Highlights</h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <article class="panel">
-                <h4 class="text-lg font-semibold">Portal Rendering &amp; Teleportation</h4>
-                <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                    <li>Rendered linked portal views through a transformed portal camera.</li>
-                    <li>Converted player and object transforms between paired portal spaces.</li>
-                    <li>Handled portal crossing separately from ordinary wall collision.</li>
-                </ul>
-            </article>
-
-            <article class="panel">
-                <h4 class="text-lg font-semibold">Custom Engine Architecture</h4>
-                <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                    <li>Extended an actor/component engine with first-person controls and quaternion transforms.</li>
-                    <li>Loaded level actors, props, collision, puzzles, and portals from JSON data.</li>
-                    <li>Managed level reloads by clearing actors, colliders, sounds, and portal references.</li>
-                </ul>
-            </article>
-
-            <article class="panel">
-                <h4 class="text-lg font-semibold">Puzzle &amp; Interaction Systems</h4>
-                <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                    <li>Built energy launchers, energy pellets, catchers, doors, and level reset behavior.</li>
-                    <li>Connected puzzle actors through parented transforms and activation callbacks.</li>
-                    <li>Supported input replay to validate player movement and interaction sequences.</li>
-                </ul>
-            </article>
-
-            <article class="panel">
-                <h4 class="text-lg font-semibold">Turret AI, Lasers &amp; Health</h4>
-                <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                    <li>Implemented turret behavior with idle, priming, firing, search, falling, and death states.</li>
-                    <li>Added laser segments that can damage actors and travel through portals.</li>
-                    <li>Used health callbacks for turret death, player damage, death audio, and feedback.</li>
-                </ul>
-            </article>
+        <div class="case-media">
+            <section class="media-frame media-16x9 media-slot">
+                <video autoplay muted loop playsinline preload="metadata" poster="images/portalclone.png">
+                    <source src="videos/portalclone.mp4" type="video/mp4" />
+                </video>
+                <div class="media-slot-placeholder">
+                    <p class="text-sm uppercase tracking-widest text-gray-400">Demo video slot</p>
+                    <p class="text-xl font-bold">videos/portalclone.mp4</p>
+                </div>
+            </section>
         </div>
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">System Clips</h3>
+    <section class="case-section">
+        <h3>What I Learned</h3>
+        <ul class="case-learned-list">
+            <li>Transforming cameras, actors, vectors, and projectiles between linked portal spaces.</li>
+            <li>Separating portal view rendering from normal world rendering while keeping the result spatially convincing.</li>
+            <li>Extending an actor/component engine with first-person controls, quaternion transforms, and JSON level data.</li>
+            <li>Designing collision rules for portals, puzzle actors, lasers, turrets, and player movement.</li>
+            <li>Building interruptible AI behavior with state machines and portal-specific transitions.</li>
+            <li>Cleaning up level state reliably for reloads, input replay, sounds, colliders, and portal references.</li>
+        </ul>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+    <section class="case-section">
+        <h3>System Breakdown</h3>
+
+        <article class="case-system">
+            <div class="case-media">
                 <div class="media-frame media-16x9 media-slot">
-                    <img src="gifs/portalclone-portals.gif"
-                         alt="Portal rendering and teleportation gameplay clip" />
+                    <img src="gifs/portalclone-portals.gif" alt="Portal rendering and teleportation gameplay clip" />
                     <div class="media-slot-placeholder">
                         <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
                         <p class="text-xl font-bold">gifs/portalclone-portals.gif</p>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold">Portal Rendering</h4>
+            </div>
+            <div class="case-text">
+                <span class="case-number">01</span>
+                <h4>Portal Rendering &amp; Teleportation</h4>
+                <p>The portal camera preserves the player's relative transform between two linked portal spaces, making the view through a portal feel continuous instead of like a disconnected render target.</p>
+                <p>Crossing logic distinguishes between looking through a portal, approaching its plane, and actually passing through it so teleportation does not jitter or repeatedly trigger.</p>
+                <ul>
+                    <li>Rendered a linked portal view using a secondary transformed camera.</li>
+                    <li>Converted camera position and orientation from one portal's local space into the other's.</li>
+                    <li>Used quaternion support for smoother first-person camera rotation.</li>
+                    <li>Detected when the player crossed the portal plane instead of merely touching it.</li>
+                    <li>Handled teleport cooldown/edge cases to avoid repeated crossing triggers.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-rendering">Rendering</span>
+                    <span class="chip tech-chip tech-camera">Camera Transforms</span>
+                    <span class="chip tech-chip tech-collision">Portal Collision</span>
                 </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+        <article class="case-system case-reverse">
+            <div class="case-media">
                 <div class="media-frame media-16x9 media-slot">
-                    <img src="gifs/portalclone-puzzles.gif"
-                         alt="Energy launcher and puzzle interaction clip" />
+                    <img src="gifs/portalclone-puzzles.gif" alt="Energy launcher and puzzle interaction clip" />
                     <div class="media-slot-placeholder">
                         <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
                         <p class="text-xl font-bold">gifs/portalclone-puzzles.gif</p>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold">Puzzle Actors</h4>
+            </div>
+            <div class="case-text">
+                <span class="case-number">02</span>
+                <h4>Energy Puzzle Actors</h4>
+                <p>I built puzzle objects around energy launchers, pellets, catchers, doors, and level reset behavior. These systems needed to cooperate with the portal system so puzzle objects could move through portal spaces cleanly.</p>
+                <p>The level reload path had to clear actors, colliders, portal links, temporary sounds, and input playback so repeated test runs behaved consistently.</p>
+                <ul>
+                    <li>Implemented energy launchers that spawn moving puzzle projectiles.</li>
+                    <li>Added energy catchers that detect successful pellet delivery.</li>
+                    <li>Connected catcher state to door activation and puzzle progression.</li>
+                    <li>Supported level reset behavior for falling, failed runs, and replay testing.</li>
+                    <li>Kept puzzle actors compatible with portal movement and collision checks.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-gameplay">Puzzle Systems</span>
+                    <span class="chip tech-chip tech-interaction">Interaction</span>
+                    <span class="chip tech-chip tech-json">JSON Levels</span>
                 </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+        <article class="case-system">
+            <div class="case-media">
                 <div class="media-frame media-16x9 media-slot">
-                    <img src="gifs/portalclone-turrets.gif"
-                         alt="Turret AI targeting and firing clip" />
+                    <img src="gifs/portalclone-turrets.gif" alt="Turret AI targeting and firing clip" />
                     <div class="media-slot-placeholder">
                         <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
                         <p class="text-xl font-bold">gifs/portalclone-turrets.gif</p>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold">Turret AI</h4>
+            </div>
+            <div class="case-text">
+                <span class="case-number">03</span>
+                <h4>Turret AI State Machine</h4>
+                <p>Turrets transition between idle, priming, firing, search, falling, and dead states. Target acquisition and target loss drive combat behavior, while portal collision can interrupt any active behavior state.</p>
+                <p>That interruption rule kept displacement logic centralized instead of scattering portal checks across every AI branch.</p>
+                <ul>
+                    <li>Created idle, priming, firing, search, falling, and dead behavior states.</li>
+                    <li>Transitioned from idle to priming when a target is acquired.</li>
+                    <li>Required the target to remain visible before firing.</li>
+                    <li>Moved into search when the target is lost and returned to idle after a delay.</li>
+                    <li>Allowed portal collision to interrupt any non-dead state and force falling behavior.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-state">FSM</span>
+                    <span class="chip tech-chip tech-ai">AI</span>
+                    <span class="chip tech-chip tech-interrupts">Interrupts</span>
                 </div>
-            </article>
+            </div>
+        </article>
 
-            <article class="feature-card p-5 rounded-xl border border-gray-800 space-y-4">
+        <article class="case-system case-reverse">
+            <div class="case-media">
                 <div class="media-frame media-16x9 media-slot">
-                    <img src="gifs/portalclone-lasers.gif"
-                         alt="Laser and damage system clip" />
+                    <img src="images/portalclone-turret-state-machine.png" alt="State machine diagram for Portal Clone turret AI" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">Diagram slot</p>
+                        <p class="text-xl font-bold">images/portalclone-turret-state-machine.png</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-text">
+                <span class="case-number">04</span>
+                <h4>State Diagram as Design Tool</h4>
+                <p>The diagram makes the AI's behavior rules explicit: turrets prime before firing, search before returning to idle, fall after portal collision, and die when health reaches zero.</p>
+                <p>Including this makes the page less like a clip reel and more like an engineering breakdown, which is exactly what this technical project should be doing.</p>
+                <ul>
+                    <li>Mapped every turret state before implementing the behavior logic.</li>
+                    <li>Defined transition conditions for target acquisition, target loss, falling, and death.</li>
+                    <li>Separated health-driven transitions from vision-driven targeting transitions.</li>
+                    <li>Used the diagram to reason about portal interruptions from any active state.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-state">State Machine</span>
+                    <span class="chip tech-chip tech-design">Technical Design</span>
+                    <span class="chip tech-chip tech-ai">AI</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="case-system">
+            <div class="case-media">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/portalclone-lasers.gif" alt="Laser and damage system clip" />
                     <div class="media-slot-placeholder">
                         <p class="text-sm uppercase tracking-widest text-gray-400">GIF slot</p>
                         <p class="text-xl font-bold">gifs/portalclone-lasers.gif</p>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold">Lasers</h4>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Turret AI State Machine</h3>
-
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800">
-            <div class="media-frame media-16x9 media-slot">
-                <img src="images/portalclone-turret-state-machine.png"
-                     alt="State machine diagram for Portal Clone turret AI" />
-                <div class="media-slot-placeholder">
-                    <p class="text-sm uppercase tracking-widest text-gray-400">Diagram slot</p>
-                    <p class="text-xl font-bold">images/portalclone-turret-state-machine.png</p>
-                </div>
             </div>
-
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">Interruptible Behavior Logic</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    Turrets use a finite state machine to manage target acquisition, priming, firing, searching, falling, and death. Portal collision can interrupt any active behavior state, which kept displacement logic centralized instead of scattered across every AI branch.
-                </p>
+            <div class="case-text">
+                <span class="case-number">05</span>
+                <h4>Lasers, Damage &amp; Health</h4>
+                <p>Laser segments use collision queries to damage actors, and the system supports laser behavior through portals. Health callbacks connect damage to turret death, player death, audio, and on-screen feedback.</p>
+                <p>This tied together rendering, collision, portals, and gameplay feedback into one testable interaction chain.</p>
+                <ul>
+                    <li>Built laser segments using collision checks against level actors.</li>
+                    <li>Allowed lasers to continue through portals by transforming their direction and origin.</li>
+                    <li>Added health components for player and turret damage handling.</li>
+                    <li>Connected death behavior to callbacks instead of hard-coding it into the laser system.</li>
+                    <li>Added damage indicators and audio feedback for clearer player response.</li>
+                </ul>
                 <div class="chip-row">
-                    <span class="chip tech-chip tech-state">FSM</span>
-                    <span class="chip tech-chip tech-ai">AI</span>
-                    <span class="chip tech-chip tech-interrupts">Interrupts</span>
-                    <span class="chip tech-chip tech-collision">Portal Collision</span>
+                    <span class="chip tech-chip tech-collision">Collision</span>
+                    <span class="chip tech-chip tech-gameplay">Gameplay</span>
+                    <span class="chip tech-chip tech-feedback">Feedback</span>
                 </div>
             </div>
         </article>
     </section>
 
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">Interesting Challenges</h3>
-
-        <div class="space-y-4">
-            <article class="feature-card p-5 rounded-xl border border-gray-800">
-                <h4 class="text-lg font-semibold">Portal View Alignment</h4>
-                <p class="text-gray-300 leading-relaxed mt-2">
-                    The portal camera needed to preserve the player's relative position and orientation across a linked portal pair, so the view through the portal felt spatially continuous instead of like a disconnected render target.
-                </p>
+    <section class="case-section">
+        <h3>Interesting Challenges</h3>
+        <div class="case-grid">
+            <article class="panel">
+                <h4 class="text-lg font-semibold mb-3">Spatial Continuity</h4>
+                <p class="text-gray-300 leading-relaxed">The portal camera and teleport transforms had to agree perfectly. If the view through the portal and the crossing transform disagree, the illusion breaks immediately.</p>
             </article>
-
-            <article class="feature-card p-5 rounded-xl border border-gray-800">
-                <h4 class="text-lg font-semibold">Portal-Aware Collision</h4>
-                <p class="text-gray-300 leading-relaxed mt-2">
-                    Collision rules had to distinguish between approaching a portal, looking through its surface, and actually crossing its plane while avoiding jitter or repeated teleport triggers.
-                </p>
-            </article>
-
-            <article class="feature-card p-5 rounded-xl border border-gray-800">
-                <h4 class="text-lg font-semibold">Clean Level Reloads</h4>
-                <p class="text-gray-300 leading-relaxed mt-2">
-                    Reloading a level required clearing actor lists, collision references, portal links, input playback, sounds, and temporary state so repeated test runs behaved consistently.
-                </p>
+            <article class="panel">
+                <h4 class="text-lg font-semibold mb-3">State Cleanup</h4>
+                <p class="text-gray-300 leading-relaxed">Level reloads had to cleanly reset actors, colliders, portals, sounds, and input replay so debugging did not inherit stale state from the previous run.</p>
             </article>
         </div>
     </section>
-
 </main>
 
 <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
@@ -240,16 +249,10 @@
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.media-slot').forEach((slot) => {
             const media = slot.querySelector('video, img');
-
             if (!media) return;
 
-            const markLoaded = () => {
-                slot.classList.add('media-loaded');
-            };
-
-            const markMissing = () => {
-                media.classList.add('media-missing');
-            };
+            const markLoaded = () => slot.classList.add('media-loaded');
+            const markMissing = () => media.classList.add('media-missing');
 
             if (media.tagName === 'VIDEO') {
                 media.addEventListener('loadeddata', markLoaded);

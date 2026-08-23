@@ -32,7 +32,6 @@
         <a href="#loop">Core Loop</a>
         <a href="#ownership">Contributions</a>
         <a href="#deep-dives">Core Systems</a>
-        <a href="#technical-design">Technical Design</a>
         <a href="#lessons">Lessons</a>
     </nav>
 
@@ -43,7 +42,6 @@
             <p class="wl-hook">
                 A 1-4 player co-op action roguelite where players are cursed weapons hunting for temporary bodies to possess.
             </p>
-            <p class="wl-mantra">Your body is temporary. Your weapon is permanent.</p>
             <p class="wl-hero-body">
                 Risk of Rain meets V Rising, but the player is the weapon. Each run is about crawling through danger in weapon form, reading NPC hosts for compatibility, luring the right body close enough to possess, and surviving when that body eventually breaks.
             </p>
@@ -51,19 +49,21 @@
                 Gameplay engineer and designer on a 2-person Unreal Engine 5.6 C++ prototype with Steam multiplayer.
             </p>
             <div class="wl-links">
-                <a href="https://www.instagram.com/nolinkstudios/" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless project updates on Instagram">
+                <a class="store-badge store-badge-instagram" href="https://www.instagram.com/nolinkstudios/" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless project updates on Instagram">
                     <img src="icons/instagram.svg" alt="" />
                     <span>Instagram</span>
                 </a>
-                <a href="https://github.com/jplatte23/WielderlessCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless code samples on GitHub">
-                    <img src="icons/github.svg" alt="" />
-                    <span>GitHub</span>
+                <a class="store-image-badge store-image-badge-steam" href="#" aria-label="Open Wielderless on Steam">
+                    <img src="icons/steam_btn.png" alt="Steam" />
+                </a>
+                <a class="store-image-badge" href="#" aria-label="Open Wielderless on itch.io">
+                    <img src="icons/itchbadge-min.png" alt="Available on itch.io" />
                 </a>
             </div>
         </div>
 
         <div class="wl-hero-media">
-            <video controls autoplay muted loop playsinline poster="images/Wielderless.png">
+            <video autoplay muted loop playsinline poster="images/Wielderless.png">
                 <source src="videos/wielderlessdemo.mp4" type="video/mp4" />
             </video>
             <p class="wl-caption">Current prototype: weapon movement, scan/lure interaction, charm and possession flow, host combat, and multiplayer testing.</p>
@@ -214,75 +214,6 @@
                 </div>
             </div>
         </article>
-    </section>
-
-    <section id="technical-design" class="wl-section wl-accent-architecture">
-        <h3>Technical Challenge</h3>
-        <p class="wl-architecture-intro">
-            Player identity moves between different replicated actors. That means possession changes controller ownership, movement, camera, HUD, abilities, combat, animation, and networking. The challenge was not possession itself; it was preserving player intent while all of those systems changed underneath them.
-        </p>
-
-        <article class="wl-arch-map">
-            <div class="wl-diagram-head">
-                <h4>Possession Lifecycle</h4>
-                <p>The core loop players repeat across a run: search for a host, take control, fight, lose the host, and recover.</p>
-            </div>
-            <div class="wl-gameplay-loop" aria-label="Wielderless possession gameplay loop diagram">
-                <div class="wl-loop-node weapon">
-                    <span>Start</span>
-                    <strong>Weapon Form</strong>
-                    <small>Physics movement, vulnerable positioning, scan/lure tools.</small>
-                </div>
-                <div class="wl-loop-arrow">scan nearby NPCs</div>
-                <div class="wl-loop-node scan">
-                    <span>Decision</span>
-                    <strong>Compatible Host?</strong>
-                    <small>Compatibility makes host choice part of the prototype's risk/reward loop.</small>
-                </div>
-                <div class="wl-loop-split">
-                    <div class="wl-loop-path muted">
-                        <span>No</span>
-                        <strong>Keep Exploring</strong>
-                        <small>Stay in weapon form and search for a better body.</small>
-                    </div>
-                    <div class="wl-loop-path active">
-                        <span>Yes</span>
-                        <strong>Lure and Weaken</strong>
-                        <small>Tether the target until it can be charmed.</small>
-                    </div>
-                </div>
-                <div class="wl-loop-arrow">possess host</div>
-                <div class="wl-loop-node host">
-                    <span>Payoff</span>
-                    <strong>Host Combat</strong>
-                    <small>Movement, attacks, camera, HUD, and abilities swap to host form.</small>
-                </div>
-                <div class="wl-loop-split">
-                    <div class="wl-loop-path active">
-                        <span>Host Lives</span>
-                        <strong>Continue Encounter</strong>
-                        <small>Fight, reposition, or transfer into a better host.</small>
-                    </div>
-                    <div class="wl-loop-path danger">
-                        <span>Host Dies</span>
-                        <strong>Return to Weapon</strong>
-                        <small>Eject back to weapon form, or break if integrity reaches zero.</small>
-                    </div>
-                </div>
-            </div>
-            <p class="wl-diagram-caption">
-                The engineering challenge was keeping this loop stable while the player's controlled actor changes. Possession has to preserve player intent while swapping movement, camera, HUD, abilities, combat rules, animation state, and replicated gameplay state.
-            </p>
-        </article>
-
-        <div class="wl-challenge-strip" aria-label="Possession engineering challenges">
-            <span>Controller transfer</span>
-            <span>Camera ownership</span>
-            <span>HUD ownership</span>
-            <span>Ability swapping</span>
-            <span>Replication</span>
-            <span>Animation state</span>
-        </div>
     </section>
 
     <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
