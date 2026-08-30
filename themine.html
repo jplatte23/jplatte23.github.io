@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Platte Portfolio</title>
+    <title>Catskill Mine | Jason Platte Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -26,183 +26,103 @@
     </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
+<main class="wl-page mx-auto px-6 md:px-10">
+    <nav class="wl-jump-nav" aria-label="Catskill Mine page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#ownership">Contributions</a>
+        <a href="#deep-dives">Core Systems</a>
+        <a href="#lessons">Lessons</a>
+    </nav>
 
-    <!-- Title -->
-    <header class="text-center space-y-2">
-        <h2 class="text-4xl font-extrabold tracking-tight">The Mine (WIP)</h2>
-        <p class="text-gray-400">Gameplay Engineer &amp; Designer | Unity, C#, Perforce</p>
-    </header>
-
-    <!-- The Game -->
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">The Game</h3>
-
-        <p class="text-gray-200 leading-relaxed">
-            A single-player first-person horror game built in Unity, focused on descending through a dangerous mine shaft
-            while being stalked by a Cartoon Cat (SCP). The experience centers on unstable elevator traversal,
-            escalating tension, environmental hazards, and limited player counterplay.
-        </p>
-
-        <!-- Responsive YouTube embed -->
-        <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
-            <div class="relative w-full" style="padding-top:56.25%;">
-                <iframe class="absolute inset-0 w-full h-full"
-                        src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID?rel=0&modestbranding=1"
-                        title="The Mine gameplay"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
+    <section id="overview" class="wl-hero">
+        <div class="wl-hero-copy">
+            <p class="wl-kicker">Single-player horror game</p>
+            <h2>Catskill Mine</h2>
+            <p class="wl-hook">
+                A first-person horror descent through an unstable mine attraction built in Unity.
+            </p>
+            <p class="wl-hero-body">
+                I worked as a gameplay engineer and designer, focusing on the systems that make the descent feel dangerous: elevator traversal, enemy encounter behavior, procedural creature motion, cinematic triggers, audio feedback, and player counterplay.
+            </p>
+            <p class="wl-meta-line">
+                Unity | C# | Perforce | Gameplay Systems | Horror Encounter Design
+            </p>
+            <div class="wl-links">
+                <a class="store-image-badge store-image-badge-steam" href="https://store.steampowered.com/app/4905660/Catskill_Mine_10000ft_Below/" target="_blank" rel="noopener noreferrer" aria-label="Open Catskill Mine on Steam">
+                    <img src="icons/steam_btn.png" alt="Steam" />
+                </a>
+                <a class="store-image-badge" href="#" aria-label="Open Catskill Mine on itch.io">
+                    <img src="icons/itchbadge-min.png" alt="Available on itch.io" />
+                </a>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
-                <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                    <li><span class="text-white font-semibold">Gameplay Systems:</span> elevator traversal, movement tuning, player counterplay, encounter logic</li>
-                    <li><span class="text-white font-semibold">Enemy Behavior:</span> spider attack pacing, shaft traversal, aggression states, flashbang reactions</li>
-                    <li><span class="text-white font-semibold">Procedural Animation/VFX:</span> spider leg IK, raycast-based surface detection, grapple/tentacle effects</li>
-                    <li><span class="text-white font-semibold">Game Feel:</span> movement audio, camera control, jumpscare timing, post-processing transitions</li>
-                    <li><span class="text-white font-semibold">Tools:</span> Unity, C#, Perforce</li>
-                </ul>
-            </div>
-
-            <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                <h4 class="text-lg font-semibold mb-2">Links</h4>
-
-                <a href="https://store.steampowered.com/app/3532010/Art_House/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
-                    px-4 py-3 font-semibold text-white transition shadow"
-                   aria-label="Open The Mine on Steam">
-                    <!-- Steam icon (simple) -->
-                    <img src="icons/steam.svg" alt="" class="w-20 h-20" />
-                </a>
-
-                <a href="YOUR_GITHUB_REPO_LINK"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
-              px-4 py-3 font-semibold text-white transition shadow"
-                   aria-label="Open The Mine source code on GitHub">
-                    <i class="fab fa-github text-2xl"></i>
-                    <span>Source Code</span>
-                </a>
-
-                <p class="text-xs text-gray-500 mt-3">
-                    Opens GitHub in a new tab.
-                </p>
-            </div>
+        <div class="wl-hero-media">
+            <video autoplay muted loop playsinline poster="images/TheMine.png">
+                <source src="videos/catskilldemo.mp4" type="video/mp4" />
+            </video>
         </div>
     </section>
 
-    <!-- Contribution Gallery -->
-    <section class="space-y-5">
-        <div class="flex items-baseline justify-between">
-            <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
+    <section id="ownership" class="wl-section wl-accent-role">
+        <div class="wl-contribution-panel">
+            <h3>Main Contributions</h3>
+            <ul>
+                <li><strong>Engineered elevator traversal</strong> with asymmetric acceleration, braking, slip behavior, and layered movement audio to make vertical movement feel unstable and dangerous.</li>
+                <li><strong>Implemented spider encounter behavior</strong> including shaft traversal, aggression pacing, flashbang counterplay, and kill-state handling.</li>
+                <li><strong>Built procedural creature motion and VFX</strong> using raycast-driven spider leg IK, wall attachment checks, curved line rendering, and grapple/tentacle effects.</li>
+                <li><strong>Created cinematic horror sequences</strong> using triggers, camera control, animation/audio events, and post-processing transitions.</li>
+            </ul>
         </div>
+    </section>
 
-        <!-- Card 1 -->
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                <img src="gifs/mine-elevator.gif"
-                     alt="Elevator traversal and movement tuning"
-                     class="w-full h-full object-cover" />
+    <section id="deep-dives" class="wl-section wl-accent-systems">
+        <h3>Core Systems</h3>
+
+        <article class="wl-deep-dive wl-system-weapon">
+            <div class="wl-media">
+                <img src="gifs/mine-elevator.gif" alt="Elevator traversal and movement tuning" />
             </div>
-
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">
-                    Elevator Traversal &amp; Tension System
-                </h4>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Engineered a custom elevator traversal system designed to make vertical movement feel heavy, unstable,
-                    and dangerous. The system uses asymmetric acceleration, braking, slip behavior, and layered movement audio
-                    to create tension during the descent.
-                </p>
-
-                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                    <li>Asymmetric acceleration and braking for weighty elevator movement</li>
-                    <li>Slip behavior to create moments of instability during traversal</li>
-                    <li>Layered movement audio to reinforce mechanical strain</li>
-                    <li>Tuning focused on tension, readability, and player anticipation</li>
-                </ul>
-
+            <div class="wl-system-text">
+                <p class="wl-system-number">01</p>
+                <h4>Elevator Traversal &amp; Tension</h4>
+                <p class="wl-problem">The elevator needed to feel heavy, unstable, and unsafe instead of like a normal platform. I tuned the movement around slow acceleration, braking, slip behavior, and audio layers so the descent created pressure by itself.</p>
+                <p>The goal was to give players control while making every movement decision feel risky inside the mine shaft.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
                     <span class="chip tech-chip tech-movement">Traversal</span>
-                    <span class="chip tech-chip tech-gameplay">Game Feel</span>
                     <span class="chip tech-chip tech-audio">Audio Feedback</span>
                 </div>
             </div>
         </article>
 
-        <!-- Card 2 -->
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                <img src="gifs/mine-spider.gif"
-                     alt="Spider encounter behavior"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-reverse wl-system-compat">
+            <div class="wl-media">
+                <img src="gifs/mine-spider.gif" alt="Spider encounter behavior" />
             </div>
-
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">
-                    Spider Encounter System
-                </h4>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Built a state-driven spider encounter system that controls shaft traversal, attack pacing,
-                    aggression logic, flashbang counterplay, and kill-state handling. The goal was to create pressure
-                    while preserving enough readability for the player to react.
-                </p>
-
-                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                    <li>Lightweight state machine for movement, attacking, and paused behavior</li>
-                    <li>Attack pacing and randomized timing to reduce scripted-feeling encounters</li>
-                    <li>Flashbang counterplay that temporarily interrupts and repositions the spider</li>
-                    <li>Kill-volume gating to prevent unfair instant deaths and overlap edge cases</li>
-                </ul>
-
+            <div class="wl-system-text">
+                <p class="wl-system-number">02</p>
+                <h4>Spider Encounter System</h4>
+                <p class="wl-problem">The enemy system controls shaft traversal, attack pacing, aggression, flashbang reaction, and kill-state logic. I wanted the encounter to feel threatening without becoming unreadable or unfair.</p>
+                <p>Flashbang counterplay gives the player a limited way to interrupt pressure, which made the encounter less scripted and more interactive.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-ai">Enemy AI</span>
                     <span class="chip tech-chip tech-state">State Machine</span>
                     <span class="chip tech-chip tech-design">Counterplay</span>
-                    <span class="chip tech-chip tech-ai">Encounter Design</span>
                 </div>
             </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                <img src="gifs/mine-ik-vfx.gif"
-                     alt="Procedural spider IK and grapple effects"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-system-lure">
+            <div class="wl-media">
+                <img src="gifs/mine-ik-vfx.gif" alt="Procedural spider IK and grapple effects" />
             </div>
-
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">
-                    Procedural Spider IK &amp; Grapple VFX
-                </h4>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Developed procedural spider leg IK and grapple/tentacle effects to make creature movement feel more grounded
-                    and reactive inside the mine shaft. The systems use raycasts, curved line rendering, and wall attachment logic
-                    to create dynamic contact with the environment.
-                </p>
-
-                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                    <li>Raycast-based surface detection for leg and grapple attachment points</li>
-                    <li>Curved line rendering for tentacle/grapple-style visual effects</li>
-                    <li>Procedural placement to make creature motion react to the environment</li>
-                    <li>Tuning focused on readability during fast-paced encounter moments</li>
-                </ul>
-
+            <div class="wl-system-text">
+                <p class="wl-system-number">03</p>
+                <h4>Procedural Spider IK &amp; Grapple VFX</h4>
+                <p class="wl-problem">I used raycasts and wall attachment checks to make spider legs and grapple effects react to the mine geometry instead of feeling pasted on top of the environment.</p>
+                <p>Curved line rendering and procedural placement helped sell fast creature motion while keeping the player focused on threat direction.</p>
                 <div class="chip-row">
-                    <span class="chip tech-chip tech-procgen">Procedural Animation</span>
                     <span class="chip tech-chip tech-animation">IK</span>
                     <span class="chip tech-chip tech-vfx">VFX</span>
                     <span class="chip tech-chip tech-raycasts">Raycasting</span>
@@ -210,72 +130,46 @@
             </div>
         </article>
 
-        <!-- Card 4 -->
-        <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-            <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                <img src="gifs/mine-cinematics.gif"
-                     alt="Cinematic horror sequences"
-                     class="w-full h-full object-cover" />
+        <article class="wl-deep-dive wl-reverse wl-system-possession">
+            <div class="wl-media">
+                <img src="gifs/mine-cinematics.gif" alt="Cinematic horror sequences" />
             </div>
-
-            <div class="space-y-3">
-                <h4 class="text-lg font-semibold">
-                    Cinematic Horror Sequences
-                </h4>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Created scripted gameplay sequences using triggers, camera control, animation/audio events,
-                    and post-processing transitions to support horror pacing and key story moments.
-                </p>
-
-                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                    <li>Trigger-driven sequences for controlled in-game horror events</li>
-                    <li>Camera behavior, animation timing, and audio cues for scene pacing</li>
-                    <li>Post-processing transitions to strengthen presentation and mood</li>
-                    <li>Integrated cinematic moments while maintaining player context</li>
-                </ul>
-
+            <div class="wl-system-text">
+                <p class="wl-system-number">04</p>
+                <h4>Cinematic Horror Sequences</h4>
+                <p class="wl-problem">I created scripted gameplay moments with triggers, camera control, animation events, audio timing, and post-processing transitions to support horror pacing during key beats.</p>
+                <p>The challenge was making scenes feel directed while keeping the player oriented and preserving the first-person experience.</p>
                 <div class="chip-row">
                     <span class="chip tech-chip tech-cinematics">Cinematics</span>
                     <span class="chip tech-chip tech-camera">Camera Control</span>
                     <span class="chip tech-chip tech-horror">Horror Design</span>
-                    <span class="chip tech-chip tech-polish">Polish</span>
                 </div>
             </div>
         </article>
     </section>
 
-    <section class="rounded-xl border border-gray-800 p-5 bg-[#0f1115] space-y-2">
-        <h3 class="text-2xl font-semibold">Technical Summary</h3>
-        <p class="text-gray-300 leading-relaxed">
-            The Mine demonstrates gameplay systems engineering in a single-player horror environment, combining custom traversal feel,
-            enemy encounter behavior, procedural creature animation, VFX, and cinematic event scripting to create tension through
-            mechanics, feedback, and environmental instability.
-        </p>
+    <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
+        <h3>Lessons Learned</h3>
+        <p class="wl-lessons-intro">What Catskill Mine taught me.</p>
+        <div>
+            <blockquote>
+                Good teamwork turns creative disagreement into a design tool.
+                <span>For a cave cubby-hole uncovering mechanic, we compared a tactile tracing interaction against a clearer key-sequence version using criteria like scope, readability, fantasy fit, and input support. We chose the key sequence, then added animation and effects to keep the physical feel I cared about.</span>
+            </blockquote>
+            <blockquote>
+                Horror systems depend on timing as much as mechanics.
+                <span>Movement speed, encounter pauses, camera control, audio cues, and post-processing timing all change how fair or frightening the same interaction feels.</span>
+            </blockquote>
+            <blockquote>
+                Player counterplay makes enemy pressure stronger.
+                <span>The spider felt more engaging once flashbang reactions and attack pacing gave players readable moments to react instead of only waiting for scripted scares.</span>
+            </blockquote>
+            <blockquote>
+                Procedural animation needs strong constraints.
+                <span>Raycast-driven IK and grapple effects became more convincing when they were tuned around readable contact points rather than unrestricted procedural motion.</span>
+            </blockquote>
+        </div>
     </section>
-
-    <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">My Contributions</h3>
-        <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
-            <li>
-                Engineered a <span class="text-white font-semibold">custom elevator traversal system</span> with asymmetric acceleration,
-                braking, slip behavior, and layered movement audio to make traversal feel heavy and risky.
-            </li>
-            <li>
-                Implemented the <span class="text-white font-semibold">spider encounter system</span>, including shaft traversal,
-                attack pacing, aggression logic, flashbang counterplay, and kill-state handling.
-            </li>
-            <li>
-                Built <span class="text-white font-semibold">procedural spider leg IK and grapple/tentacle VFX</span> using raycasts,
-                curved line rendering, and wall attachment logic.
-            </li>
-            <li>
-                Created <span class="text-white font-semibold">cinematic gameplay sequences</span> using triggers, camera control,
-                animation/audio events, and post-processing transitions.
-            </li>
-        </ul>
-    </section>
-
 </main>
 
 <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
