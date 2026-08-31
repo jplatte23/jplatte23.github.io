@@ -3,305 +3,188 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Platte Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>The Bookstore | Jason Platte Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="bg-black text-white">
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
+    <div class="h-px w-full mt-5" style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);"></div>
+</header>
 
-    <!-- Header -->
-    <header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
-        <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+<main class="wl-page mx-auto px-6 md:px-10">
+    <nav class="wl-jump-nav" aria-label="The Bookstore page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#ownership">Contributions</a>
+        <a href="#deep-dives">Core Systems</a>
+        <a href="#lessons">Lessons</a>
+    </nav>
 
-        <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
-            <a href="index.html" class="nav-link nav-glow">Games</a>
-            <a href="code.html" class="nav-link nav-glow">Code</a>
-            <a href="about.html" class="nav-link nav-glow">About</a>
-        </nav>
-
-        <!-- gradient divider line -->
-        <div class="h-px w-full mt-5"
-             style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    <section id="overview" class="wl-hero">
+        <div class="wl-hero-copy">
+            <p class="wl-kicker">First-person horror game</p>
+            <h2>The Bookstore</h2>
+            <p class="wl-hook">A two-person Unity horror project built around looping spaces, exploration, and psychological tension.</p>
+            <p class="wl-hero-body">I implemented gameplay, interaction, objective, and environment systems for a 15-week project, including looping escalator transitions, first-person pickups, encounter logic, world-state progression, and audio integration.</p>
+            <p class="wl-meta-line">Unity | C# | Perforce | Horror Systems | itch.io Release</p>
+            <div class="chip-row">
+                <span class="chip tech-chip tech-unity">Unity</span>
+                <span class="chip tech-chip tech-csharp">C#</span>
+                <span class="chip tech-chip tech-horror">Horror Design</span>
+                <span class="chip tech-chip tech-shipped">Shipped</span>
+            </div>
+            <div class="wl-links">
+                <a class="store-image-badge" href="https://avelichkov.itch.io/the-bookstore" target="_blank" rel="noopener noreferrer" aria-label="Open The Bookstore on itch.io">
+                    <img src="icons/itchbadge-min.png" alt="Available on itch.io" />
+                </a>
+                <a class="store-badge store-badge-github" href="https://github.com/jplatte23/BookstoreCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open The Bookstore code samples on GitHub">
+                    <img src="icons/github.svg" alt="" />
+                    <span>GitHub</span>
+                </a>
+            </div>
         </div>
-    </header>
+        <div class="wl-hero-media">
+            <video autoplay muted loop playsinline poster="images/ss7.jpg">
+                <source src="videos/bookstoredemo.mp4" type="video/mp4" />
+            </video>
+            <p class="wl-caption">Gameplay footage showing the looping descent, first-person interaction, and horror pacing in The Bookstore.</p>
+        </div>
+    </section>
 
-    <main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
-
-        <!-- Title -->
-        <header class="text-center space-y-2">
-            <h2 class="text-4xl font-extrabold tracking-tight">The Bookstore</h2>
-            <p class="text-gray-400">Engineer &amp; Designer | Unity, C#, Perforce</p>
-        </header>
-
-        <!-- The Game -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">The Game</h3>
-
-            <p class="text-gray-200 leading-relaxed">
-                A 15-week, 2-person first-person horror game built in Unity, focused on traversal tension,
-                environmental looping, and interactive exploration. The core hook is a seamless “looping” descent
-                where spaces repeat in ways that feel consistent, but wrong... reinforcing the psychological horror tone.
-            </p>
-
-            <!-- Videos ) -->
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
-                <!-- Video 1 -->
-                <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
-                    <div class="relative w-full" style="padding-top:56.25%;">
-                        <iframe class="absolute inset-0 w-full h-full"
-                                src="https://www.youtube-nocookie.com/embed/uLLd6SOOXFw?rel=0&modestbranding=1"
-                                title="The Bookstore gameplay"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technical Focus + Links -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
-                    <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                        <li><span class="text-white font-semibold">Gameplay Systems:</span> first-person movement, interaction/pickups, encounter logic</li>
-                        <li><span class="text-white font-semibold">Looping Level Tech:</span> seamless environment repetition via triggers + state control</li>
-                        <li><span class="text-white font-semibold">World Building:</span> authored environments with performance-aware layout decisions</li>
-                        <li><span class="text-white font-semibold">Audio Integration:</span> coordinating external SFX delivery and in-engine implementation</li>
-                    </ul>
-                </div>
-
-                <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Links</h4>
-
-                    <!-- Itch.io button -->
-                    <a href="https://avelichkov.itch.io/the-bookstore"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#fa5c5c] hover:bg-[#ff6b6b]
-                    px-4 py-3 font-semibold text-white transition shadow"
-                       aria-label="Open The Bookstore on itch.io">
-                        <span>View on itch.io</span>
-                    </a>
-
-                    <a href="https://github.com/jplatte23/BookstoreCodeSamples"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
-              px-4 py-3 font-semibold text-white transition shadow"
-                       aria-label="Open The Mine source code on GitHub">
-                        <i class="fab fa-github text-2xl"></i>
-                        <span>Source Code</span>
-                    </a>
-
-                    <p class="text-xs text-gray-500 mt-3">
-                        itch.io link opens in a new tab.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contribution Gallery -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
-
-            <div class="space-y-5">
-
-                <!-- Card 1 -->
-                <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                    <!-- GIF -->
-                    <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                        <img src="gifs/bookstore-looping.gif"
-                             alt="Looping escalator and environment repetition"
-                             class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text -->
-                    <div class="space-y-3">
-                        <h4 class="text-lg font-semibold">
-                            Looping Environment &amp; Escalator System
-                        </h4>
-
-                        <p class="text-gray-300 leading-relaxed">
-                            Collaborated on a seamless looping descent mechanic that repeats spaces without breaking immersion,
-                            supporting psychological horror pacing and reinforcing disorientation through consistent transitions.
-                        </p>
-
-                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                            <li>Trigger-driven transitions between repeated segments</li>
-                            <li>Player/camera alignment to preserve orientation</li>
-                            <li>State-safe handling for backtracking and edge cases</li>
-                            <li>Consistency checks for lighting and audio continuity</li>
-                        </ul>
-
-                        <div class="chip-row">
-                            <span class="chip tech-chip tech-systems">Level Systems</span>
-                            <span class="chip tech-chip tech-triggers">Triggers</span>
-                            <span class="chip tech-chip tech-gameplay">Gameplay</span>
-                            <span class="chip tech-chip tech-polish">Polish</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                    <!-- GIF -->
-                    <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                        <img src="gifs/bookstore-interactions.gif"
-                             alt="First-person interactions and item pickup"
-                             class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text -->
-                    <div class="space-y-3">
-                        <h4 class="text-lg font-semibold">
-                            First-Person Interaction &amp; Item Pickup
-                        </h4>
-
-                        <p class="text-gray-300 leading-relaxed">
-                            Implemented core first-person gameplay systems for exploration and interaction, including pickup logic and
-                            world affordances that support puzzle/traversal flow.
-                        </p>
-
-                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                            <li>Pickup triggers, interaction prompts, and feedback</li>
-                            <li>Game-state updates tied to collected objectives</li>
-                            <li>Scene-safe interactions across multiple areas</li>
-                            <li>Playtest-driven iteration for clarity and pacing</li>
-                        </ul>
-
-                        <div class="chip-row">
-                            <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
-                            <span class="chip tech-chip tech-interaction">Interaction</span>
-                            <span class="chip tech-chip tech-state">State</span>
-                            <span class="chip tech-chip tech-ui">UI</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                    <!-- GIF -->
-                    <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                        <img src="gifs/bookstore-enemy-avoidance.gif"
-                             alt="Enemy avoidance and tension encounter"
-                             class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text -->
-                    <div class="space-y-3">
-                        <h4 class="text-lg font-semibold">
-                            Enemy Avoidance &amp; Encounter Logic
-                        </h4>
-
-                        <p class="text-gray-300 leading-relaxed">
-                            Implemented encounter scripting that supports tense “avoid and escape” gameplay, tuning triggers and pacing
-                            so threats read clearly while staying unpredictable across repeated spaces.
-                        </p>
-
-                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                            <li>Detection / proximity triggers for encounter beats</li>
-                            <li>Safe-zone and escape routing support</li>
-                            <li>Timing and pacing adjustments from playtests</li>
-                            <li>Edge-case handling to prevent softlocks</li>
-                        </ul>
-
-                        <div class="chip-row">
-                            <span class="chip tech-chip tech-ai">AI</span>
-                            <span class="chip tech-chip tech-ai">Encounters</span>
-                            <span class="chip tech-chip tech-tuning">Tuning</span>
-                            <span class="chip tech-chip tech-gameplay">Gameplay</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                    <!-- GIF -->
-                    <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                        <!-- TODO: replace src with your gif -->
-                        <img src="gifs/bookstore-objective-state.gif"
-                             alt="Objective completion driving doors and level transitions"
-                             class="w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Text -->
-                    <div class="space-y-3">
-                        <h4 class="text-lg font-semibold">
-                            Objective-Driven World State &amp; Level Transitions
-                        </h4>
-
-                        <p class="text-gray-300 leading-relaxed">
-                            Built gameplay state systems that drive world progression, unlocking doors,
-                            triggering level transitions, and advancing encounters when player objectives
-                            are completed.
-                        </p>
-
-                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                            <li>Objective completion tracking and validation</li>
-                            <li>Door unlocks and traversal gating tied to game state</li>
-                            <li>Scene transitions triggered by progression milestones</li>
-                            <li>Fail-safe handling to prevent progression softlocks</li>
-                        </ul>
-
-                        <div class="chip-row">
-                            <span class="chip tech-chip tech-gameplay">Gameplay State</span>
-                            <span class="chip tech-chip tech-systems">Level Flow</span>
-                            <span class="chip tech-chip tech-triggers">Triggers</span>
-                            <span class="chip tech-chip tech-systems">Systems</span>
-                        </div>
-                    </div>
-                </article>
-
-
-            </div>
-        </section>
-
-        <!-- Technical Summary -->
-        <section class="rounded-xl border border-gray-800 p-6 bg-[#0f1115]">
-            <h3 class="text-xl font-semibold mb-2">Technical Summary</h3>
-            <p class="text-gray-300 leading-relaxed">
-                The Bookstore demonstrates end-to-end gameplay and environment systems development in a first-person horror experience,
-                combining traversal and interaction mechanics with a seamless looping level feature, plus polish and integration work
-                needed to ship a playable build under a tight schedule.
-            </p>
-        </section>
-
-        <!-- My Contributions  -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">My Contributions</h3>
-
-            <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
-                <li>
-                    Implemented core first-person gameplay systems including movement, interaction/pickups, and encounter scripting
-                    in Unity using C# to support puzzle-driven traversal and horror pacing.
-                </li>
-                <li>
-                    Collaborated on the looping escalator mechanic and environment transitions, ensuring repeated spaces remain
-                    consistent and immersive while preventing softlocks and navigation edge cases.
-                </li>
-                <li>
-                    Designed and optimized environments for readability and atmosphere, iterating on layout, lighting, and asset
-                    placement to maintain performance while reinforcing the game’s tone.
-                </li>
-                <li>
-                    Coordinated with an external sound team to integrate unique audio assets and implement in-engine playback and
-                    event timing to strengthen atmosphere and player feedback.
-                </li>
-                <li>
-                    Supported testing, polish, and public release on itch.io through iteration on bugs, pacing, and presentation
-                    under a tight production schedule.
-                </li>
+    <section id="ownership" class="wl-section wl-accent-role">
+        <div class="wl-contribution-panel">
+            <h3>Main Contributions</h3>
+            <ul>
+                <li><strong>Built first-person gameplay systems</strong> for movement, pickups, interaction prompts, objective state, and encounter scripting.</li>
+                <li><strong>Collaborated on the looping escalator mechanic</strong> so repeated spaces stayed immersive and avoided softlocks.</li>
+                <li><strong>Designed and optimized environments</strong> for readability, atmosphere, performance, and horror pacing.</li>
+                <li><strong>Coordinated audio integration</strong> with an external sound team and timed playback to in-game events.</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section id="deep-dives" class="wl-section wl-accent-systems">
+        <h3>Core Systems</h3>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
-        &copy; 2026 Jason Platte. All rights reserved.
-    </footer>
+        <article class="wl-deep-dive wl-system-weapon">
+            <div class="wl-media">
+                <img src="gifs/bookstore-looping.gif" alt="Looping escalator and environment repetition" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">01</p>
+                <h4>Looping Environment &amp; Escalator</h4>
+                <p class="wl-problem">The central horror trick was a seamless descent where the space repeats in a way that feels consistent, but wrong.</p>
+                <ul>
+                    <li>Used triggers to transition between repeated environment segments.</li>
+                    <li>Aligned player and camera state to preserve orientation.</li>
+                    <li>Handled backtracking and edge cases safely.</li>
+                    <li>Checked lighting and audio continuity across loops.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-systems">Level Systems</span>
+                    <span class="chip tech-chip tech-triggers">Triggers</span>
+                    <span class="chip tech-chip tech-polish">Polish</span>
+                </div>
+            </div>
+        </article>
 
+        <article class="wl-deep-dive wl-reverse wl-system-compat">
+            <div class="wl-media">
+                <img src="gifs/bookstore-interactions.gif" alt="First-person interactions and item pickup" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">02</p>
+                <h4>First-Person Interaction &amp; Pickup</h4>
+                <p class="wl-problem">Exploration needed simple, reliable interactions so the player could read objects and progression without breaking tension.</p>
+                <ul>
+                    <li>Implemented pickup triggers, prompts, and feedback.</li>
+                    <li>Connected collected objectives to game state.</li>
+                    <li>Kept interactions safe across multiple areas.</li>
+                    <li>Tuned clarity and pacing through playtests.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
+                    <span class="chip tech-chip tech-interaction">Interaction</span>
+                    <span class="chip tech-chip tech-ui">UI</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-system-lure">
+            <div class="wl-media">
+                <img src="gifs/bookstore-enemy-avoidance.gif" alt="Enemy avoidance and tension encounter" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">03</p>
+                <h4>Enemy Avoidance &amp; Encounter Logic</h4>
+                <p class="wl-problem">Encounters had to feel tense and unpredictable without confusing players or trapping them in repeated spaces.</p>
+                <ul>
+                    <li>Built detection and proximity triggers for encounter beats.</li>
+                    <li>Supported safe-zone and escape routing logic.</li>
+                    <li>Adjusted timing and pacing from playtests.</li>
+                    <li>Handled edge cases to prevent softlocks.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-ai">Encounters</span>
+                    <span class="chip tech-chip tech-tuning">Tuning</span>
+                    <span class="chip tech-chip tech-gameplay">Gameplay</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-reverse wl-system-possession">
+            <div class="wl-media">
+                <img src="gifs/bookstore-objective-state.gif" alt="Objective completion driving doors and level transitions" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">04</p>
+                <h4>Objective-Driven World State</h4>
+                <p class="wl-problem">Doors, level transitions, and encounter beats needed to respond reliably when player objectives were completed.</p>
+                <ul>
+                    <li>Tracked and validated objective completion.</li>
+                    <li>Tied door unlocks and traversal gates to game state.</li>
+                    <li>Triggered scene transitions from progression milestones.</li>
+                    <li>Added fail-safes to prevent progression softlocks.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-state">Game State</span>
+                    <span class="chip tech-chip tech-progression">Level Flow</span>
+                    <span class="chip tech-chip tech-triggers">Triggers</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
+        <h3>Lessons Learned</h3>
+        <p class="wl-lessons-intro">What The Bookstore taught me.</p>
+        <div>
+            <blockquote>
+                Horror systems work best when they protect pacing.
+                <span>Looping spaces, enemy timing, audio events, and objective gates all had to support the same feeling of controlled disorientation.</span>
+            </blockquote>
+            <blockquote>
+                Small-team projects reward flexible ownership.
+                <span>With two developers, I had to move between engineering, design, world building, testing, and audio integration without losing sight of the player experience.</span>
+            </blockquote>
+            <blockquote>
+                Progression logic needs fail-safes.
+                <span>Objective and transition systems became more reliable when every unlock, door, and scene change had a clear state source.</span>
+            </blockquote>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
 </body>
 </html>

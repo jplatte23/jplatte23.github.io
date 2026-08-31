@@ -3,294 +3,185 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Platte Portfolio</title>
+    <title>Deep Containment | Jason Platte Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="bg-black text-white">
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
+    <div class="h-px w-full mt-5" style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);"></div>
+</header>
 
-    <header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
-        <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+<main class="wl-page mx-auto px-6 md:px-10">
+    <nav class="wl-jump-nav" aria-label="Deep Containment page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#ownership">Contributions</a>
+        <a href="#deep-dives">Core Systems</a>
+        <a href="#lessons">Lessons</a>
+    </nav>
 
-        <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
-            <a href="index.html" class="nav-link nav-glow">Games</a>
-            <a href="code.html" class="nav-link nav-glow">Code</a>
-            <a href="about.html" class="nav-link nav-glow">About</a>
-        </nav>
-
-        <!-- gradient divider line -->
-        <div class="h-px w-full mt-5"
-             style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    <section id="overview" class="wl-hero">
+        <div class="wl-hero-copy">
+            <p class="wl-kicker">Underwater horror prototype</p>
+            <h2>Deep Containment</h2>
+            <p class="wl-hook">An SCP-inspired Unity horror game built around procedural spaces, enemy pressure, and underwater traversal.</p>
+            <p class="wl-hero-body">I built gameplay and technical systems for a 13-week summer project, including procedural hallway generation, A* route validation, enemy archetypes, back-peeking visibility checks, item usage, and water-current movement.</p>
+            <p class="wl-meta-line">Unity | C# | Procedural Generation | A* Pathfinding | Enemy AI</p>
+            <div class="chip-row">
+                <span class="chip tech-chip tech-unity">Unity</span>
+                <span class="chip tech-chip tech-csharp">C#</span>
+                <span class="chip tech-chip tech-procgen">Procedural Gen</span>
+                <span class="chip tech-chip tech-ai">AI</span>
+            </div>
+            <div class="wl-links">
+                <a class="store-badge store-badge-github" href="https://github.com/jplatte23/DeepContainmentCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Deep Containment code samples on GitHub">
+                    <img src="icons/github.svg" alt="" />
+                    <span>GitHub</span>
+                </a>
+            </div>
         </div>
-    </header>
+        <div class="wl-hero-media">
+            <video autoplay muted loop playsinline poster="images/ss6.png">
+                <source src="videos/deepdemo.mp4" type="video/mp4" />
+            </video>
+            <p class="wl-caption">Gameplay footage from the Deep Containment prototype, showing underwater traversal, generated spaces, and enemy pressure.</p>
+        </div>
+    </section>
 
-    <main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
-        <!-- Title -->
-        <header class="text-center space-y-2">
-            <h2 class="text-4xl font-extrabold tracking-tight">Deep Containment</h2>
-            <p class="text-gray-400">Engineer &amp; Designer | Unity, C#, Perforce</p>
-        </header>
-
-        <!-- The Game -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">The Game</h3>
-            <p class="text-gray-200 leading-relaxed">
-                SCP-inspired underwater horror experience built in Unity as a 13-week summer project, featuring replayable procedural layouts,
-                tension-driven encounters, and system-focused traversal and interaction mechanics.
-            </p>
-
-            <!-- Two videos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-                <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
-                    <div class="relative w-full" style="padding-top:56.25%;">
-                        <iframe class="absolute inset-0 w-full h-full"
-                                src="https://www.youtube-nocookie.com/embed/6u-GdPByD0k?rel=0&modestbranding=1"
-                                title="Deep Containment - Level 1"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
-                    <div class="relative w-full" style="padding-top:56.25%;">
-                        <iframe class="absolute inset-0 w-full h-full"
-                                src="https://www.youtube-nocookie.com/embed/4bkvATIy5pU?rel=0&modestbranding=1"
-                                title="Deep Containment - Level 2"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technical Focus + Tools -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
-                    <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                        <li><span class="text-white font-semibold">Procedural Generation:</span> modular hallway tiles, seed-driven layouts, replayable runs</li>
-                        <li><span class="text-white font-semibold">Navigation + AI:</span> A* pathfinding/route validation, patrol/chase behaviors, encounter tuning</li>
-                        <li><span class="text-white font-semibold">Stealth + Tension:</span> raycast-based back-peeking/visibility checks, timed attack windows</li>
-                        <li><span class="text-white font-semibold">Interaction:</span> item pickup/usage, water-current movement forces, objective flow hooks</li>
-                        <li><span class="text-white font-semibold">Tools:</span> Unity (C#), Perforce, physics queries, debug logging/iteration</li>
-                    </ul>
-                </div>
-
-                <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Links</h4>
-                    <a href="https://github.com/jplatte23/DeepContainmentCodeSamples"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
-              px-4 py-3 font-semibold text-white transition shadow"
-                       aria-label="Open The Mine source code on GitHub">
-                        <i class="fab fa-github text-2xl"></i>
-                        <span>Source Code</span>
-                    </a>
-                    <p class="text-xs text-gray-500 mt-2 text-center">
-                        Internal technical prototype — not publicly released
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contribution Gallery -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
-
-            <!-- Card 1 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/deepcont-procgen.gif"
-                         alt="Procedural hallway generator and seed validation"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">Procedural Hallway Generator &amp; Seed Validation</h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Built a modular procedural hallway generator that assembles reusable tiles into varied layouts,
-                        then validates seeds to ensure the run remains solvable and supports consistent horror pacing.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Modular tile set + layout rules for stable structure</li>
-                        <li>Seed validation pass to prevent dead ends and broken routes</li>
-                        <li>Debug visibility to iterate quickly on generation issues</li>
-                        <li>Tuned layout density for pacing and readability</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-procgen">Procedural Gen</span>
-                        <span class="chip tech-chip tech-systems">Systems</span>
-                        <span class="chip tech-chip tech-validation">Validation</span>
-                        <span class="chip tech-chip tech-iteration">Iteration</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/deepcont-astar.gif"
-                         alt="A* pathfinding route validation"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">A* Pathfinding for Solvable Routes</h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Implemented A* pathfinding to compute valid routes through generated layouts and used the results
-                        to guarantee navigation feasibility while supporting traversal goals and encounter placement.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>A* search over a tile graph / node network</li>
-                        <li>Used path checks to detect unsolvable seeds early</li>
-                        <li>Supported constraints like key areas and choke points</li>
-                        <li>Hooked validation into the generation pipeline</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-ai">AI</span>
-                        <span class="chip tech-chip tech-ai">Pathfinding</span>
-                        <span class="chip tech-chip tech-algorithms">Algorithms</span>
-                        <span class="chip tech-chip tech-systems">Systems</span>
-                    </div>
-                </div>
-            </article>
-
-            <div class="mt-4 flex justify-center">
-                <div class="max-w-xl w-full rounded-lg border border-gray-800 bg-black p-3">
-                    <p class="text-xs text-gray-400 mb-2">
-                        Debug Visualization — A* path (green) used to validate solvable procedural layouts
-                    </p>
-
-                    <div class="w-full h-64 overflow-hidden rounded">
-                        <img src="images/deepss.png"
-                             alt="A* path validation debug view"
-                             class="w-full h-full object-cover opacity-90 hover:opacity-100 transition" />
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Card 3 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/deepcont-enemy-ai.gif"
-                         alt="Enemy AI archetypes and encounter pacing"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">Enemy AI Archetypes &amp; Encounter Pacing</h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Developed enemy archetypes with patrol/chase behaviors and tuned attack windows and cooldowns
-                        to create predictable-but-tense encounters that stay fair while maintaining pressure.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>State-driven AI loops (patrol → detect → chase → reset)</li>
-                        <li>Timed attacks, cooldown tuning, and safe windows</li>
-                        <li>Raycast/visibility checks for consistent detection</li>
-                        <li>Iterated speeds/spacing to avoid “cheap” hits</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-ai">AI</span>
-                        <span class="chip tech-chip tech-state">State</span>
-                        <span class="chip tech-chip tech-tuning">Tuning</span>
-                        <span class="chip tech-chip tech-gameplay">Gameplay</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/deepcont-peek-current.gif"
-                         alt="Back-peeking and water current interaction systems"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">Back-Peeking + Water Interaction Systems</h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Implemented raycast-based back-peeking to control information and threat awareness, and added
-                        water-current forces that change movement feel and elevate tension during traversal.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Raycast-driven peeking / visibility gating</li>
-                        <li>Water current forces affecting player movement</li>
-                        <li>Item pickup + usage loop supporting exploration</li>
-                        <li>Polished responsiveness through tuning passes</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
-                        <span class="chip tech-chip tech-raycasts">Raycasts</span>
-                        <span class="chip tech-chip tech-movement">Movement</span>
-                        <span class="chip tech-chip tech-interaction">Interaction</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <!-- Technical Summary -->
-        <section class="space-y-4">
-            <div class="rounded-xl border border-gray-800 p-6 bg-[#0f1115]">
-                <h3 class="text-2xl font-semibold mb-2">Technical Summary</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Deep Containment demonstrates rapid end-to-end gameplay systems development in Unity, combining
-                    <span class="text-white font-semibold">procedural level generation</span>,
-                    <span class="text-white font-semibold">A* pathfinding / solvability checks</span>, and
-                    <span class="text-white font-semibold">enemy AI archetypes</span> with environmental interaction systems
-                    (water currents, item usage, and visibility-based peeking) to deliver a complete multi-level horror experience
-                    on a short timeline.
-                </p>
-            </div>
-        </section>
-
-        <!-- My Contributions -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">My Contributions</h3>
-
-            <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
-                <li>
-                    Built core gameplay systems including <span class="text-white font-semibold">player movement, item pickup/usage, and water-current interactions</span>
-                    in Unity using C#, iterating on feel and responsiveness through frequent playtesting.
-                </li>
-                <li>
-                    Implemented a <span class="text-white font-semibold">procedural hallway generator</span> using modular tiles and a
-                    <span class="text-white font-semibold">seed validation</span> step to ensure each run produces a playable, solvable layout.
-                </li>
-                <li>
-                    Developed <span class="text-white font-semibold">A* pathfinding + route checks</span> to prevent dead seeds and support consistent objective flow
-                    and encounter pacing across generated levels.
-                </li>
-                <li>
-                    Created <span class="text-white font-semibold">enemy AI archetypes</span> and a <span class="text-white font-semibold">raycast-based back-peeking mechanic</span>,
-                    tuning detection and attack cadence to maintain tension while keeping encounters fair.
-                </li>
+    <section id="ownership" class="wl-section wl-accent-role">
+        <div class="wl-contribution-panel">
+            <h3>Main Contributions</h3>
+            <ul>
+                <li><strong>Built a modular procedural hallway generator</strong> using reusable tiles, layout rules, seed validation, and debug visibility.</li>
+                <li><strong>Implemented A* route validation</strong> to prevent unsolvable generated layouts and support consistent objective flow.</li>
+                <li><strong>Created enemy AI archetypes</strong> with patrol, detect, chase, attack, cooldown, and reset behavior.</li>
+                <li><strong>Developed interaction and traversal systems</strong> including item pickup/usage, back-peeking, and water-current forces.</li>
             </ul>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
-        &copy; 2026 Jason Platte. All rights reserved.
-    </footer>
+    <section id="deep-dives" class="wl-section wl-accent-systems">
+        <h3>Core Systems</h3>
 
+        <article class="wl-deep-dive wl-system-weapon">
+            <div class="wl-media">
+                <img src="gifs/deepcont-procgen.gif" alt="Procedural hallway generator and seed validation" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">01</p>
+                <h4>Procedural Hallway Generator</h4>
+                <p class="wl-problem">The game needed replayable layouts without creating broken paths, unreadable spaces, or pacing dead zones.</p>
+                <ul>
+                    <li>Assembled modular hallway tiles into varied layouts.</li>
+                    <li>Used layout rules to keep generated spaces readable.</li>
+                    <li>Ran seed validation to reject broken routes.</li>
+                    <li>Added debug visibility for faster generation tuning.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-procgen">Procedural Gen</span>
+                    <span class="chip tech-chip tech-validation">Validation</span>
+                    <span class="chip tech-chip tech-systems">Systems</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-reverse wl-system-compat">
+            <div class="wl-media">
+                <img src="gifs/deepcont-astar.gif" alt="A* pathfinding route validation" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">02</p>
+                <h4>A* Solvability Checks</h4>
+                <p class="wl-problem">Generated levels had to be validated before play so the player could always reach objectives and key areas.</p>
+                <ul>
+                    <li>Implemented A* search over generated layout nodes.</li>
+                    <li>Detected unsolvable seeds before gameplay began.</li>
+                    <li>Supported constraints such as key areas and choke points.</li>
+                    <li>Hooked route checks into the generation pipeline.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-algorithms">Algorithms</span>
+                    <span class="chip tech-chip tech-ai">Pathfinding</span>
+                    <span class="chip tech-chip tech-validation">Validation</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-system-lure">
+            <div class="wl-media">
+                <img src="gifs/deepcont-enemy-ai.gif" alt="Enemy AI archetypes and encounter pacing" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">03</p>
+                <h4>Enemy AI Archetypes</h4>
+                <p class="wl-problem">The enemies needed predictable rules that could still create tension inside cramped, generated spaces.</p>
+                <ul>
+                    <li>Built state-driven patrol, detect, chase, attack, and reset loops.</li>
+                    <li>Tuned attack windows, cooldowns, and safe moments.</li>
+                    <li>Used raycast/visibility checks for consistent detection.</li>
+                    <li>Iterated speeds and spacing to avoid cheap hits.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-ai">Enemy AI</span>
+                    <span class="chip tech-chip tech-state">State</span>
+                    <span class="chip tech-chip tech-tuning">Tuning</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-reverse wl-system-possession">
+            <div class="wl-media">
+                <img src="gifs/deepcont-peek-current.gif" alt="Back-peeking and water current interaction systems" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">04</p>
+                <h4>Back-Peeking &amp; Water Interaction</h4>
+                <p class="wl-problem">Traversal and threat awareness needed to feel physical, so visibility and water movement both became part of the player’s decision-making.</p>
+                <ul>
+                    <li>Implemented raycast-driven peeking and visibility gating.</li>
+                    <li>Added water current forces that affect movement.</li>
+                    <li>Built item pickup and usage loops for exploration.</li>
+                    <li>Tuned responsiveness through repeated playtests.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-raycasts">Raycasts</span>
+                    <span class="chip tech-chip tech-movement">Movement</span>
+                    <span class="chip tech-chip tech-interaction">Interaction</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
+        <h3>Lessons Learned</h3>
+        <p class="wl-lessons-intro">What Deep Containment taught me.</p>
+        <div>
+            <blockquote>
+                Procedural generation needs validation, not just variety.
+                <span>The generator only became useful once route checks could prove that a layout was playable.</span>
+            </blockquote>
+            <blockquote>
+                Horror pacing depends on constraints.
+                <span>Enemy speeds, visibility checks, hallway density, and safe windows had to work together to make encounters tense without feeling unfair.</span>
+            </blockquote>
+            <blockquote>
+                Debug views make complex systems faster to tune.
+                <span>Visualizing generated paths and AI behavior made it much easier to find broken seeds and unclear encounter spaces.</span>
+            </blockquote>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
 </body>
 </html>

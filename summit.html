@@ -3,281 +3,189 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Platte Portfolio</title>
-
+    <title>Summit | Jason Platte Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="bg-black text-white">
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
+    <div class="h-px w-full mt-5" style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);"></div>
+</header>
 
-    <header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
-        <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+<main class="wl-page mx-auto px-6 md:px-10">
+    <nav class="wl-jump-nav" aria-label="Summit page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#ownership">Contributions</a>
+        <a href="#deep-dives">Core Systems</a>
+        <a href="#lessons">Lessons</a>
+    </nav>
 
-        <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
-            <a href="index.html" class="nav-link nav-glow">Games</a>
-            <a href="code.html" class="nav-link nav-glow">Code</a>
-            <a href="about.html" class="nav-link nav-glow">About</a>
-        </nav>
-
-        <div class="h-px w-full mt-5"
-             style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    <section id="overview" class="wl-hero">
+        <div class="wl-hero-copy">
+            <p class="wl-kicker">Networked climbing game</p>
+            <h2>Summit</h2>
+            <p class="wl-hook">A Roblox climbing experience built around stamina, items, multiplayer traversal, and progression.</p>
+            <p class="wl-hero-body">I led gameplay systems work across climbing movement, inventory and backpack UI, status effects, multiplayer synchronization, and class/currency progression.</p>
+            <p class="wl-meta-line">Roblox Studio | Luau | Multiplayer | UI Systems | Progression</p>
+            <div class="chip-row">
+                <span class="chip tech-chip tech-roblox">Roblox</span>
+                <span class="chip tech-chip tech-lua">Luau</span>
+                <span class="chip tech-chip tech-network">Multiplayer</span>
+                <span class="chip tech-chip tech-progression">Progression</span>
+            </div>
+            <div class="wl-links">
+                <a class="store-badge" href="https://www.roblox.com/games/93909852920010/Summit" target="_blank" rel="noopener noreferrer" aria-label="Open Summit on Roblox">
+                    <img src="icons/roblox.svg" alt="" />
+                    <span>Roblox</span>
+                </a>
+                <a class="store-badge store-badge-github" href="https://github.com/jplatte23/SummitCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Summit code samples on GitHub">
+                    <img src="icons/github.svg" alt="" />
+                    <span>GitHub</span>
+                </a>
+            </div>
         </div>
-    </header>
+        <div class="wl-hero-media">
+            <video autoplay muted loop playsinline poster="images/ss15.png">
+                <source src="videos/summitdemo.mp4" type="video/mp4" />
+            </video>
+            <p class="wl-caption">Gameplay footage showing traversal, climbing pressure, item use, and multiplayer play in Summit.</p>
+        </div>
+    </section>
 
-    <main class="max-w-5xl mx-auto px-6 md:px-10 py-10 space-y-10">
-
-        <!-- Title -->
-        <header class="text-center space-y-2">
-            <h2 class="text-4xl font-extrabold tracking-tight">Summit</h2>
-            <p class="text-gray-400">Engineer &amp; Designer | Lua, Roblox Studio</p>
-        </header>
-
-        <!-- The Game -->
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">The Game</h3>
-
-            <p class="text-gray-200 leading-relaxed">
-                A networked multiplayer climbing game built in Roblox Studio, featuring physics-based traversal,
-                item-driven progression, and cross-platform optimization for PC and mobile.
-            </p>
-
-            <!-- Responsive YouTube embed -->
-            <div class="rounded-xl overflow-hidden border border-gray-800 shadow-lg bg-black">
-                <div class="relative w-full" style="padding-top:56.25%;">
-                    <iframe class="absolute inset-0 w-full h-full"
-                            src="https://www.youtube.com/embed/SGGyyZv7TB4?rel=0&modestbranding=1"
-                            title="Summit gameplay"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                <div class="md:col-span-2 rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Technical Focus</h4>
-                    <ul class="text-gray-300 space-y-2 list-disc list-inside">
-                        <li><span class="text-white font-semibold">Gameplay Systems:</span> climbing traversal, inventory/backpack, status effects</li>
-                        <li><span class="text-white font-semibold">Networking:</span> client/server scripting patterns for responsive multiplayer gameplay</li>
-                        <li><span class="text-white font-semibold">Progression:</span> class + currency systems and persistence concepts</li>
-                        <li><span class="text-white font-semibold">Iteration:</span> playtesting-driven tuning and bug fixing</li>
-                        <li><span class="text-white font-semibold">Tools:</span> Roblox Studio, Luau</li>
-                    </ul>
-                </div>
-
-                <div class="rounded-xl border border-gray-800 p-5 bg-[#0f1115]">
-                    <h4 class="text-lg font-semibold mb-2">Links</h4>
-                    <a href="https://www.roblox.com/games/93909852920010/Summit"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#1b2838] hover:bg-[#223446]
-                        px-4 py-3 font-semibold text-white transition shadow"
-                       aria-label="Open Art House on Steam">
-                        <!-- Roblox icon -->
-                        <img src="icons/roblox.svg" alt="" class="w-20 h-20" />
-                    </a>
-                    <a href="https://github.com/jplatte23/SummitCodeSamples"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-700 bg-gray-900 hover:border-green-400 hover:text-green-300
-              px-4 py-3 font-semibold text-white transition shadow"
-                       aria-label="Open The Mine source code on GitHub">
-                        <i class="fab fa-github text-2xl"></i>
-                        <span>Source Code</span>
-                    </a>
-                    
-                    <p class="text-xs text-gray-500 mt-3">
-                        Note: If you’re reviewing on mobile, Roblox may open in the app.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contribution Gallery (Cards + GIF placeholders) -->
-        <section class="space-y-5">
-            <div class="flex items-baseline justify-between">
-                <h3 class="text-2xl font-semibold">Contribution Gallery</h3>
-            </div>
-
-            <!-- Card 1 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <!-- GIF -->
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/summit-climbing.gif"
-                         alt="Climbing traversal and stamina lunge"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <!-- Text -->
-                <div class="space-y-3">
-
-                    <h4 class="text-lg font-semibold">
-                        Climbing Traversal &amp; Stamina-Based Lunge
-                    </h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Implemented a stamina-driven climbing system with a high-cost lunge move
-                        that trades endurance for speed, supporting risk–reward movement decisions.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Stamina drain + regeneration balancing</li>
-                        <li>Lunge speed vs. stamina cost tradeoff</li>
-                        <li>Wall detection and attachment logic</li>
-                        <li>Responsive traversal on PC and mobile</li>
-                    </ul>
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
-                        <span class="chip tech-chip tech-movement">Traversal</span>
-                        <span class="chip tech-chip tech-state">State Machines</span>
-                        <span class="chip tech-chip tech-network">Cross-Platform</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <!-- Card 2 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <!-- GIF -->
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/summit-inventory.gif"
-                         alt="Inventory, backpack, and status effects"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <!-- Text -->
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">
-                        Inventory, Backpack, &amp; Status Effects
-                    </h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Built an inventory and backpack system with interactive UI and gameplay-driven status effects, focusing on reliable
-                        state updates so items, buffs/debuffs, and UI feedback stay consistent during moment-to-moment play.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Item pickup / equip / use flows tied to UI</li>
-                        <li>Status effects application and timing</li>
-                        <li>UI state updates for inventory + effects</li>
-                        <li>Bug fixing for edge cases and desync-prone states</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-ui">UI Systems</span>
-                        <span class="chip tech-chip tech-gameplay">Game State</span>
-                        <span class="chip tech-chip tech-inventory">Inventory</span>
-                        <span class="chip tech-chip tech-status">Status Effects</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <!-- GIF -->
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/summit-multiplayer.gif"
-                         alt="Multiplayer synchronization and client/server gameplay"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <!-- Text -->
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">
-                        Multiplayer Synchronization
-                    </h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Implemented multiplayer gameplay logic using client/server scripting patterns so core interactions and movement feel
-                        responsive while remaining consistent across players in a shared session.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Client/server separation for gameplay responsibilities</li>
-                        <li>Replicated player actions and interaction state</li>
-                        <li>Focused debugging on inconsistent or out-of-sync behavior</li>
-                        <li>Validation testing with multiple players across devices</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-network">Networking</span>
-                        <span class="chip tech-chip tech-network">Client/Server</span>
-                        <span class="chip tech-chip tech-network">Replication</span>
-                        <span class="chip tech-chip tech-debugging">Debugging</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="feature-card grid grid-cols-1 md:grid-cols-2 gap-5 p-5 rounded-xl border border-gray-800 bg-[#0f1115]">
-                <!-- GIF -->
-                <div class="media-frame media-16x9 rounded-lg overflow-hidden border border-gray-800 bg-black">
-                    <img src="gifs/summit-progression.gif"
-                         alt="Class and currency progression systems"
-                         class="w-full h-full object-cover" />
-                </div>
-
-                <!-- Text -->
-                <div class="space-y-3">
-                    <h4 class="text-lg font-semibold">
-                        Class &amp; Currency Progression
-                    </h4>
-
-                    <p class="text-gray-300 leading-relaxed">
-                        Designed and implemented class selection and currency-based progression systems to give players clear goals and a reason
-                        to keep climbing, iterating on pacing and clarity through playtests.
-                    </p>
-
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Class selection logic and UI states</li>
-                        <li>Currency earning/spending loops to support progression</li>
-                        <li>Progression pacing adjustments from playtest feedback</li>
-                        <li>Persistence concepts for saving player data over time</li>
-                    </ul>
-
-                    <div class="chip-row">
-                        <span class="chip tech-chip tech-progression">Progression Systems</span>
-                        <span class="chip tech-chip tech-economy">Economy Design</span>
-                        <span class="chip tech-chip tech-persistence">Persistence</span>
-                        <span class="chip tech-chip tech-ui">UI Flow</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section class="rounded-xl border border-gray-800 p-5 bg-[#0f1115] space-y-2">
-            <h3 class="text-2xl font-semibold">Technical Summary</h3>
-            <p class="text-gray-300 leading-relaxed">
-                Summit demonstrates end-to-end gameplay systems ownership in a networked environment, combining stamina-driven traversal,
-                UI-driven inventory and status effects, multiplayer synchronization, and progression systems within a shipped Roblox experience.
-            </p>
-        </section>
-
-        <section class="space-y-4">
-            <h3 class="text-2xl font-semibold">My Contributions</h3>
-            <ul class="list-disc list-inside space-y-3 text-gray-300 leading-relaxed">
-                <li>
-                    Led end-to-end development of core gameplay systems including climbing traversal, stamina-based movement, inventory, and status effects in Roblox Studio using Lua.
-                </li>
-                <li>
-                    Designed and implemented class and currency progression systems, iterating on balance and clarity through regular playtests and player feedback.
-                </li>
-                <li>
-                    Built responsive client/server gameplay logic and UI interactions to ensure consistent behavior across PC and mobile platform.
-                </li>
-                <li>
-                    Owned integration, testing, and publishing of the project on Roblox, supporting ongoing iteration through bug fixes and gameplay tuning.
-                </li>
+    <section id="ownership" class="wl-section wl-accent-role">
+        <div class="wl-contribution-panel">
+            <h3>Main Contributions</h3>
+            <ul>
+                <li><strong>Led core gameplay systems</strong> for climbing traversal, stamina-based lunging, inventory, backpack UI, and status effects.</li>
+                <li><strong>Built client/server gameplay logic</strong> to keep multiplayer interactions responsive and consistent across PC and mobile.</li>
+                <li><strong>Designed progression systems</strong> including class selection, currency loops, and player-facing goals.</li>
+                <li><strong>Owned integration and publishing support</strong> through testing, bug fixing, and gameplay tuning on Roblox.</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section id="deep-dives" class="wl-section wl-accent-systems">
+        <h3>Core Systems</h3>
 
-    <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
-        &copy; 2026 Jason Platte. All rights reserved.
-    </footer>
+        <article class="wl-deep-dive wl-system-weapon">
+            <div class="wl-media">
+                <img src="gifs/summit-climbing.gif" alt="Climbing traversal and stamina lunge" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">01</p>
+                <h4>Climbing Traversal &amp; Stamina Lunge</h4>
+                <p class="wl-problem">The climbing system needed to feel responsive while still making stamina a meaningful resource during risky movement.</p>
+                <ul>
+                    <li>Implemented stamina drain and regeneration balancing.</li>
+                    <li>Built a high-cost lunge that trades endurance for speed.</li>
+                    <li>Added wall detection and attachment logic.</li>
+                    <li>Tuned controls for PC and mobile responsiveness.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-gameplay">Gameplay Systems</span>
+                    <span class="chip tech-chip tech-movement">Traversal</span>
+                    <span class="chip tech-chip tech-status">Stamina</span>
+                </div>
+            </div>
+        </article>
 
+        <article class="wl-deep-dive wl-reverse wl-system-compat">
+            <div class="wl-media">
+                <img src="gifs/summit-inventory.gif" alt="Inventory, backpack, and status effects" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">02</p>
+                <h4>Inventory, Backpack &amp; Status Effects</h4>
+                <p class="wl-problem">Items, buffs, debuffs, and UI feedback all needed to stay in sync during moment-to-moment play.</p>
+                <ul>
+                    <li>Built item pickup, equip, and use flows tied to UI.</li>
+                    <li>Implemented timed status effect application.</li>
+                    <li>Updated inventory and effect UI from gameplay state.</li>
+                    <li>Fixed edge cases in state transitions and item use.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-ui">UI Systems</span>
+                    <span class="chip tech-chip tech-inventory">Inventory</span>
+                    <span class="chip tech-chip tech-status">Status Effects</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-system-lure">
+            <div class="wl-media">
+                <img src="gifs/summit-multiplayer.gif" alt="Multiplayer synchronization and client/server gameplay" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">03</p>
+                <h4>Multiplayer Synchronization</h4>
+                <p class="wl-problem">Shared climbing gameplay had to feel immediate to the local player while staying consistent for everyone else in the session.</p>
+                <ul>
+                    <li>Separated client and server gameplay responsibilities.</li>
+                    <li>Replicated player actions and interaction state.</li>
+                    <li>Debugged inconsistent or out-of-sync behavior.</li>
+                    <li>Tested multiplayer behavior across devices.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-network">Networking</span>
+                    <span class="chip tech-chip tech-network">Client/Server</span>
+                    <span class="chip tech-chip tech-debugging">Debugging</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="wl-deep-dive wl-reverse wl-system-possession">
+            <div class="wl-media">
+                <img src="gifs/summit-progression.gif" alt="Class and currency progression systems" />
+            </div>
+            <div class="wl-system-text">
+                <p class="wl-system-number">04</p>
+                <h4>Class &amp; Currency Progression</h4>
+                <p class="wl-problem">Progression systems gave players a reason to keep climbing, experiment with classes, and understand their next goal.</p>
+                <ul>
+                    <li>Implemented class selection logic and UI states.</li>
+                    <li>Built currency earning and spending loops.</li>
+                    <li>Adjusted progression pacing from playtest feedback.</li>
+                    <li>Explored persistence concepts for saving player data.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-progression">Progression</span>
+                    <span class="chip tech-chip tech-economy">Economy</span>
+                    <span class="chip tech-chip tech-ui">UI Flow</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="lessons" class="wl-section wl-lessons wl-accent-lessons">
+        <h3>Lessons Learned</h3>
+        <p class="wl-lessons-intro">What Summit taught me.</p>
+        <div>
+            <blockquote>
+                Multiplayer systems need clear ownership boundaries.
+                <span>Separating client responsiveness from server authority helped keep movement and interactions feeling good without making shared state fragile.</span>
+            </blockquote>
+            <blockquote>
+                Traversal mechanics are also economy mechanics.
+                <span>Stamina costs, item value, and progression rewards all affected how players chose routes and took risks.</span>
+            </blockquote>
+            <blockquote>
+                Cross-platform design has to be tested, not assumed.
+                <span>PC and mobile controls changed how climbing, lunge timing, and UI flows needed to be tuned.</span>
+            </blockquote>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
 </body>
 </html>
