@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ Ray Tracer | Jason Platte Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260831-icons" />
+</head>
+
+<body class="bg-black text-white">
+
+<header class="py-6 text-center relative shadow-lg" style="background-color:#202123;">
+    <h1 class="text-2xl font-extrabold tracking-wide text-white">Jason Platte</h1>
+
+    <nav class="mt-3 flex justify-center space-x-8 text-2xl md:text-3xl text-gray-400">
+        <a href="index.html" class="nav-link nav-glow">Games</a>
+        <a href="code.html" class="nav-link nav-glow">Code</a>
+        <a href="about.html" class="nav-link nav-glow">About</a>
+    </nav>
+
+    <div class="header-socials" aria-label="Contact links">
+        <a href="https://github.com/jplatte23" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on GitHub">
+            <img class="header-icon-github" src="icons/github.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/jason-platte-7981bb261/" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on LinkedIn">
+            <img class="header-social-icon header-icon-linkedin" src="icons/linkedin-svgrepo-com.svg" alt="" />
+        </a>
+        <a href="mailto:jasonplatte2@gmail.com" aria-label="Email Jason Platte">
+            <img class="header-social-icon header-icon-email" src="icons/email-mail-svgrepo-com.svg" alt="" />
+        </a>
+    </div>
+
+    <div class="h-px w-full mt-5"
+         style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
+    </div>
+</header>
+
+<main class="case-page">
+    <section class="case-hero">
+        <div>
+            <p class="case-kicker">Rendering</p>
+            <h2>C++ Ray Tracer</h2>
+            <p class="case-hook">
+                C++ graphics project focused on CPU ray tracing, Phong lighting, triangle and sphere intersections, shader-based OpenGL rendering, and spline-driven camera motion.
+            </p>
+            <p class="case-body">
+                This project demonstrates the rendering and math fundamentals behind engine work: tracing rays through scene data, shading surfaces, building geometry buffers, and moving cameras through 3D space.
+            </p>
+            <p class="case-meta">C++ | OpenGL | GLSL | Ray Tracing</p>
+            <div class="chip-row case-stack">
+                <span class="chip tech-chip tech-cpp">C++</span>
+                <span class="chip tech-chip tech-opengl">OpenGL</span>
+                <span class="chip tech-chip tech-shaders">GLSL</span>
+                <span class="chip tech-chip tech-rendering">Rendering</span>
+                <span class="chip tech-chip tech-lighting">Phong Lighting</span>
+                <span class="chip tech-chip tech-algorithms">Ray Tracing</span>
+            </div>
+        </div>
+
+        <div class="case-media">
+            <section class="media-frame media-16x9 media-slot">
+                <img src="images/graphics-foundations/raytracer-002.jpg" alt="CPU ray tracer rendering a shaded triangle and sphere scene" />
+                <div class="media-slot-placeholder">
+                    <p class="text-sm uppercase tracking-widest text-gray-400">Visual slot</p>
+                    <p class="text-xl font-bold">Ray traced sphere and triangle scene</p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <h3>What I Learned</h3>
+        <ul class="case-learned-list">
+            <li>Building geometry buffers directly from image data, spline samples, and parsed scene descriptions.</li>
+            <li>Connecting CPU-side geometry generation to OpenGL VAOs, VBOs, shader inputs, uniforms, and draw calls.</li>
+            <li>Using matrices, camera transforms, tangents, normals, and binormals to move through 3D space.</li>
+            <li>Writing GLSL shaders for height coloring, texture mapping, and Phong lighting.</li>
+            <li>Implementing ray-sphere and ray-triangle intersection tests from the underlying math.</li>
+            <li>Interpolating per-vertex surface data with barycentric coordinates for triangle shading.</li>
+        </ul>
+    </section>
+
+    <section class="case-section">
+        <h3>System Breakdown</h3>
+
+        <article class="case-system">
+            <div class="case-media">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/raytracer-heightmap.gif" alt="OpenGL heightfield renderer screenshot" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">Screenshot slot</p>
+                        <p class="text-xl font-bold">Heightfield rendering</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-text">
+                <span class="case-number">01</span>
+                <h4>Heightfield Rendering</h4>
+                <p>I converted grayscale image data into 3D terrain geometry and rendered it through an OpenGL shader pipeline.</p>
+                <ul>
+                    <li>Sampled image pixels into height-based vertex positions.</li>
+                    <li>Built separate VAO/VBO paths for point, wireframe, solid, and smoothed render modes.</li>
+                    <li>Added keyboard switching between render modes during runtime.</li>
+                    <li>Used shader uniforms for transform matrices, height scaling, exponent control, and render mode state.</li>
+                    <li>Implemented a JetColorMap shader path for height-based terrain coloring.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-opengl">OpenGL</span>
+                    <span class="chip tech-chip tech-shaders">GLSL</span>
+                    <span class="chip tech-chip tech-3d">Heightfields</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="case-system case-reverse">
+            <div class="case-media">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/raytracer-spline.gif" alt="Spline-based roller coaster track with textured environment" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">Screenshot slot</p>
+                        <p class="text-xl font-bold">Spline track camera</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-text">
+                <span class="case-number">02</span>
+                <h4>Spline Track &amp; Camera Motion</h4>
+                <p>I used Catmull-Rom splines to generate a continuous track and drive a camera along the path.</p>
+                <ul>
+                    <li>Evaluated spline position and derivative using a Catmull-Rom basis matrix.</li>
+                    <li>Computed tangent, normal, and binormal vectors along the path.</li>
+                    <li>Generated rail cross-section geometry from the moving coordinate frame.</li>
+                    <li>Moved the camera along the spline using LookAt with position, focus, and up vectors.</li>
+                    <li>Loaded multiple spline files to create a longer generated path.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-camera">Camera</span>
+                    <span class="chip tech-chip tech-algorithms">Splines</span>
+                    <span class="chip tech-chip tech-3d">3D Math</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="case-system case-reverse">
+            <div class="case-media">
+                <div class="media-frame media-16x9 media-slot">
+                    <img src="gifs/raytracer.gif" alt="CPU ray traced scene with triangles and shadowing" />
+                    <div class="media-slot-placeholder">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">Screenshot slot</p>
+                        <p class="text-xl font-bold">CPU ray tracing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-text">
+                <span class="case-number">03</span>
+                <h4>CPU Ray Tracing</h4>
+                <p>I implemented a scene-file ray tracer that casts primary rays through each pixel, intersects them against spheres and triangles, and shades the nearest hit.</p>
+                <ul>
+                    <li>Parsed scene data for triangles, spheres, lights, and ambient light.</li>
+                    <li>Implemented ray-sphere intersection using the quadratic equation.</li>
+                    <li>Implemented ray-triangle intersection with plane tests and barycentric inside checks.</li>
+                    <li>Interpolated triangle normals, diffuse color, specular color, and shininess using barycentric weights.</li>
+                    <li>Added first-pass shadow rays for light obstruction, with imperfect shadows noted in the project readme.</li>
+                </ul>
+                <div class="chip-row">
+                    <span class="chip tech-chip tech-algorithms">Ray Tracing</span>
+                    <span class="chip tech-chip tech-lighting">Phong</span>
+                    <span class="chip tech-chip tech-validation">Scene Parsing</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="case-section">
+        <h3>Interesting Challenges</h3>
+        <div class="case-grid">
+            <article class="panel">
+                <h4 class="text-lg font-semibold mb-3">Making Math Visible</h4>
+                <p class="text-gray-300 leading-relaxed">The project pushed me to turn abstract graphics math into visible output: height values became terrain, spline derivatives became camera orientation, and barycentric weights became smooth triangle shading.</p>
+            </article>
+            <article class="panel">
+                <h4 class="text-lg font-semibold mb-3">Debugging The Pipeline</h4>
+                <p class="text-gray-300 leading-relaxed">Small mistakes in buffer layout, shader inputs, normal transforms, or intersection tests could break the whole image, so each feature needed to be isolated and verified visually before layering on the next system.</p>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    &copy; 2026 Jason Platte. All rights reserved.
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.media-slot').forEach((slot) => {
+            const media = slot.querySelector('video, img');
+            if (!media) return;
+
+            const markLoaded = () => slot.classList.add('media-loaded');
+            const markMissing = () => media.classList.add('media-missing');
+
+            if (media.tagName === 'VIDEO') {
+                media.addEventListener('loadeddata', markLoaded);
+                media.addEventListener('error', markMissing);
+            } else {
+                media.addEventListener('load', markLoaded);
+                media.addEventListener('error', markMissing);
+                if (media.complete && media.naturalWidth > 0) markLoaded();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
