@@ -74,6 +74,8 @@ body {
     display: inline-flex;
     width: 28px;
     height: 28px;
+    min-width: 28px;
+    flex: 0 0 28px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -87,11 +89,13 @@ body {
 
 .header-socials img {
     display: block;
-    width: 24px;
-    height: 24px;
-    max-width: 24px;
-    max-height: 24px;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 0;
+    max-width: 24px !important;
+    max-height: 24px !important;
     object-fit: contain;
+    flex: 0 0 auto;
 }
 
 .header-socials .header-icon-github {
