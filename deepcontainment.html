@@ -17,6 +17,17 @@
         <a href="code.html" class="nav-link nav-glow">Code</a>
         <a href="about.html" class="nav-link nav-glow">About</a>
     </nav>
+    <div class="header-socials" aria-label="Contact links">
+        <a href="https://github.com/jplatte23" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on GitHub">
+            <img class="header-icon-github" src="icons/github.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/jason-platte-7981bb261/" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on LinkedIn">
+            <img class="header-social-icon header-icon-linkedin" src="icons/linkedin-svgrepo-com.svg" alt="" />
+        </a>
+        <a href="mailto:jasonplatte2@gmail.com" aria-label="Email Jason Platte">
+            <img class="header-social-icon header-icon-email" src="icons/email-mail-svgrepo-com.svg" alt="" />
+        </a>
+    </div>
     <div class="h-px w-full mt-5" style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);"></div>
 </header>
 
@@ -43,7 +54,7 @@
             </div>
             <div class="wl-links">
                 <a class="store-badge store-badge-github" href="https://github.com/jplatte23/DeepContainmentCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Deep Containment code samples on GitHub">
-                    <img src="icons/github.svg" alt="" />
+                    <img class="header-icon-github" src="icons/github.svg" alt="" />
                     <span>GitHub</span>
                 </a>
             </div>
@@ -60,9 +71,9 @@
         <div class="wl-contribution-panel">
             <h3>Main Contributions</h3>
             <ul>
-                <li><strong>Built a modular procedural hallway generator</strong> using reusable tiles, layout rules, seed validation, and debug visibility.</li>
-                <li><strong>Implemented A* route validation</strong> to prevent unsolvable generated layouts and support consistent objective flow.</li>
-                <li><strong>Created enemy AI archetypes</strong> with patrol, detect, chase, attack, cooldown, and reset behavior.</li>
+                <li><strong>Delivered a solo playable build in 13 weeks</strong> by owning end-to-end development through milestone planning, grayboxing, iterative playtests, bug fixing, Git, and in-engine tooling.</li>
+                <li><strong>Built reusable threat behavior</strong> by implementing AI for 2 enemy archetypes and ambient fish using finite-state logic, raycasting, and physics queries in C#, supporting encounter checks and environment movement.</li>
+                <li><strong>Ensured procedurally generated levels remained solvable</strong> by combining A* pathfinding with modular maze generation, preventing unreachable layouts while preserving varied level designs.</li>
                 <li><strong>Developed interaction and traversal systems</strong> including item pickup/usage, back-peeking, and water-current forces.</li>
             </ul>
         </div>
@@ -185,3 +196,5 @@
 </footer>
 </body>
 </html>
+
+

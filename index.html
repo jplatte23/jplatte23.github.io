@@ -21,6 +21,18 @@
         <a href="about.html" class="nav-link nav-glow">About</a>
     </nav>
 
+    <div class="header-socials" aria-label="Contact links">
+        <a href="https://github.com/jplatte23" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on GitHub">
+            <img class="header-icon-github" src="icons/github.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/jason-platte-7981bb261/" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on LinkedIn">
+            <img class="header-social-icon header-icon-linkedin" src="icons/linkedin-svgrepo-com.svg" alt="" />
+        </a>
+        <a href="mailto:jasonplatte2@gmail.com" aria-label="Email Jason Platte">
+            <img class="header-social-icon header-icon-email" src="icons/email-mail-svgrepo-com.svg" alt="" />
+        </a>
+    </div>
+
     <div class="h-px w-full mt-5"
          style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
     </div>
@@ -48,7 +60,7 @@
         </div>
 
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="arthouse.html"
+            <a href="wielderless.html"
                class="inline-flex items-center px-5 py-3 rounded-lg font-semibold text-black bg-green-400 hover:bg-green-300 transition">
                 View Featured Project
             </a>
@@ -60,65 +72,92 @@
     </div>
 </section>
 
-<!-- Featured Project -->
-<section class="pb-8 px-6 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8 text-green-400">Featured Project</h2>
+<!-- Featured Game Work -->
+<section class="featured-work-section">
+    <div class="featured-work-heading">
+        <h2>Featured Game Work</h2>
+        <p>Two projects that show shipped team production and active systems ownership.</p>
+    </div>
 
-    <a href="arthouse.html"
-       class="glow-card block bg-gray-800 rounded overflow-hidden border border-gray-700 hover:border-green-400 transition">
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="card-media relative h-72 lg:h-full overflow-hidden">
-                <img src="images/ss8.jpg" alt="Art House" class="card-poster w-full h-full object-cover" style="object-position: 7% center;">                
-                <video class="card-video absolute inset-0 w-full h-full object-cover"
-                       muted
-                       playsinline
-                       loop
-                       preload="metadata">
+    <div class="featured-work-grid">
+        <a href="wielderless.html" class="featured-work-card">
+            <div class="featured-work-media">
+                <video autoplay muted playsinline loop preload="metadata" poster="images/Wielderless.png">
+                    <source src="videos/wielderlessdemo.mp4" type="video/mp4">
+                </video>
+                <div class="card-media-label">
+                    <p>Active Systems Prototype</p>
+                </div>
+            </div>
+            <div class="featured-work-copy">
+                <div class="featured-title-row">
+                    <h3>Wielderless</h3>
+                    <span class="engine-mark">
+                        <img class="engine-icon" src="icons/unreal-engine-icon.svg" alt="" aria-hidden="true">
+                        Unreal Engine
+                    </span>
+                </div>
+                <p class="featured-role">Gameplay engineer &amp; designer</p>
+                <p class="featured-meta">C++ • 2-person team • Active Development</p>
+                <p>Wielderless is a co-op action roguelite where you play as a cursed sentient weapon that can possess nearly any enemy and turn them into your next playable body.</p>
+                <div class="featured-contributions">
+                    <h4>Key Contributions</h4>
+                    <ul>
+                        <li>Built a server-authoritative possession system transferring control between weapon pawns and replicated NPC hosts.</li>
+                        <li>Developed physics-driven weapon movement, visual smoothing, glow buildup, burst feedback, and impact audio.</li>
+                        <li>Profiled and optimized large-scale NPC/world simulation, improving fixed-seed captures from 60.41 to 109.91 FPS.</li>
+                        <li>Developed a Steam multiplayer session subsystem for lobby creation/discovery, join codes, lifecycle handling, and ready-gated travel.</li>
+                    </ul>
+                </div>
+                <div class="featured-work-tags">
+                    <span class="badge tech-chip tech-unreal">Unreal</span>
+                    <span class="badge tech-chip tech-cpp">C++</span>
+                    <span class="badge tech-chip tech-network">Steam Multiplayer</span>
+                    <span class="badge tech-chip tech-gameplay">Gameplay Systems</span>
+                </div>
+                <span class="featured-read-more">Read More</span>
+            </div>
+        </a>
+
+        <a href="arthouse.html" class="featured-work-card">
+            <div class="featured-work-media">
+                <video autoplay muted playsinline loop preload="metadata" poster="images/ss8.jpg">
                     <source src="videos/artdemo.mp4" type="video/mp4">
                 </video>
                 <div class="card-media-label">
                     <p>Shipped Steam Game</p>
                 </div>
             </div>
-
-            <div class="p-6 md:p-8 flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-4">
-                    <div>
-                        <h3 class="text-3xl font-bold text-white">Art House</h3>
-                        <p class="text-gray-400 mt-1">Unity / C# • 2025</p>
-                    </div>
-                    <div class="text-right text-sm text-gray-400">
-                        <div>30+ person team</div>
-                        <div>Shipped on Steam</div>
-                    </div>
+            <div class="featured-work-copy">
+                <div class="featured-title-row">
+                    <h3>Art House</h3>
+                    <span class="engine-mark">
+                        <img class="engine-icon" src="icons/unity-game-engine-icon.svg" alt="" aria-hidden="true">
+                        Unity
+                    </span>
                 </div>
-
-                <p class="mt-5 text-gray-300 text-lg leading-relaxed">
-                    A shipped narrative platformer built in Unity, where I contributed gameplay systems,
-                    obstacle mechanics, enemy behavior iteration, and player-facing bug fixes across a year-long capstone production.
-                </p>
-
-                <div class="mt-6">
-                    <h4 class="text-white font-semibold mb-3">Key Contributions</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>• Fixed 50+ player-facing bugs across traversal, puzzle interactions, and gameplay edge cases</li>
-                        <li>• Implemented obstacle mechanics including portal-style rifts and lightning hazards</li>
-                        <li>• Iterated on enemy behavior scripts to improve encounter clarity and consistency</li>
-                        <li>• Collaborated with designers and artists through playtesting, code reviews, and milestone polish</li>
+                <p class="featured-role">Gameplay engineer</p>
+                <p class="featured-meta">C# • 30+ person team • Shipped on Steam</p>
+                <p>A shipped narrative platformer about grief and memory, built by a large interdisciplinary capstone team.</p>
+                <div class="featured-contributions">
+                    <h4>Key Contributions</h4>
+                    <ul>
+                        <li>Shipped a Steam title with 94% positive reviews by implementing gameplay systems and supporting team iteration.</li>
+                        <li>Fixed 50+ player-facing bugs across Unity/C# systems, Linear tasks, regression checks, and milestone builds.</li>
+                        <li>Designed and polished enemy AI behaviors, state logic, transition timing, and encounter fairness.</li>
+                        <li>Built obstacle mechanics including portal-style rifts and lightning hazards.</li>
                     </ul>
                 </div>
-
-                <div class="mt-6 flex flex-wrap gap-2">
+                <div class="featured-work-tags">
                     <span class="badge tech-chip tech-shipped">Shipped Game</span>
                     <span class="badge tech-chip tech-unity">Unity</span>
                     <span class="badge tech-chip tech-csharp">C#</span>
-                    <span class="badge tech-chip tech-gameplay">Gameplay Systems</span>
-                    <span class="badge tech-chip tech-debugging">Debugging</span>
                     <span class="badge tech-chip tech-team">Team Production</span>
                 </div>
+                <span class="featured-read-more">Read More</span>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </section>
 
 <!-- Currently Building -->
@@ -145,35 +184,35 @@
                     <p>Co-op UE Game in Development</p>
                 </div>
             </div>
-    
+
             <div class="p-4">
                 <div class="flex items-center justify-between">
                     <h3 class="text-xl font-semibold">Wielderless</h3>
                     <span class="text-gray-500 text-sm">2026</span>
                 </div>
-    
+
                 <p class="mt-2 text-sm text-gray-400 leading-relaxed">
-                    Co-op dark fantasy game where players are living weapons, possessing hosts and fighting through a cursed village to kill its champion.
+                    UE5 co-op roguelite prototype with server-authoritative possession, physics-driven weapon movement, Steam sessions, and NPC/world optimization.
                 </p>
-    
+
                 <div class="meta-row">
-                            <span class="meta-item">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                                <span>2</span>
-                            </span>
-    
                     <span class="meta-item">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>Ongoing</span>
-                            </span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span>2</span>
+                    </span>
+
+                    <span class="meta-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Ongoing</span>
+                    </span>
                 </div>
-    
+
                 <div class="badges">
                     <span class="badge tech-chip tech-unreal">Unreal 5.6</span>
                     <span class="badge tech-chip tech-cpp">C++</span>
@@ -183,7 +222,7 @@
                 </div>
             </div>
         </a>
-        
+
         <!-- Project Card: Catskill Mine -->
         <a href="themine.html" class="glow-card block bg-gray-800 rounded overflow-hidden">
             <div class="card-media relative h-48 overflow-hidden">
@@ -268,7 +307,7 @@
                 </div>
 
                 <p class="mt-2 text-sm text-gray-400 leading-relaxed">
-                    Shipped narrative platformer built in Unity, featuring gameplay systems, obstacle mechanics, and enemy behavior iteration.
+                    Shipped Unity capstone with gameplay systems, 50+ player-facing bug fixes, obstacle mechanics, and polished enemy AI behavior.
                 </p>
 
                 <div class="meta-row">
@@ -323,7 +362,7 @@
                 </div>
 
                 <p class="mt-2 text-sm text-gray-400 leading-relaxed">
-                    Networked multiplayer climbing game with traversal, inventory, progression, and client/server gameplay systems.
+                    Roblox multiplayer climbing game with 10+ classes, 15+ items, responsive traversal mechanics, and DataStore-backed progression.
                 </p>
 
                 <div class="meta-row">
@@ -377,7 +416,7 @@
                 </div>
 
                 <p class="mt-2 text-sm text-gray-400 leading-relaxed">
-                    Solo horror prototype featuring AI enemies and procedural hallway generation with validation.
+                    Solo Unity horror prototype delivered in 13 weeks with procedural level generation, A* validation, and reusable enemy AI behaviors.
                 </p>
 
                 <div class="meta-row">
@@ -643,3 +682,5 @@
 
 </body>
 </html>
+
+

@@ -21,6 +21,18 @@
         <a href="about.html" class="nav-link nav-glow">About</a>
     </nav>
 
+    <div class="header-socials" aria-label="Contact links">
+        <a href="https://github.com/jplatte23" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on GitHub">
+            <img class="header-icon-github" src="icons/github.svg" alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/jason-platte-7981bb261/" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Platte on LinkedIn">
+            <img class="header-social-icon header-icon-linkedin" src="icons/linkedin-svgrepo-com.svg" alt="" />
+        </a>
+        <a href="mailto:jasonplatte2@gmail.com" aria-label="Email Jason Platte">
+            <img class="header-social-icon header-icon-email" src="icons/email-mail-svgrepo-com.svg" alt="" />
+        </a>
+    </div>
+
     <div class="h-px w-full mt-5"
          style="background: linear-gradient(90deg, transparent, rgba(52,211,153,0.55), rgba(34,211,238,0.45), transparent);">
     </div>
@@ -54,7 +66,7 @@
                     <span>Instagram</span>
                 </a>
                 <a class="store-badge store-badge-github" href="https://github.com/jplatte23/WielderlessCodeSamples" target="_blank" rel="noopener noreferrer" aria-label="Open Wielderless code samples on GitHub">
-                    <img src="icons/github.svg" alt="" />
+                    <img class="header-icon-github" src="icons/github.svg" alt="" />
                     <span>GitHub</span>
                 </a>
                 <a class="store-image-badge store-image-badge-steam" href="#" aria-label="Open Wielderless on Steam">
@@ -78,10 +90,11 @@
         <div class="wl-contribution-panel">
             <h3>Main Contributions</h3>
             <ul>
-                <li><strong>Created weapon-form movement</strong> with physics impulses, glow buildup, burst feedback, impact audio, and Niagara effects.</li>
-                <li><strong>Implemented networked possession</strong> so control can move from weapon form into a host, between hosts, and back to weapon form after death or sacrifice.</li>
-                <li><strong>Built NPC scan, lure, charm, possess, and consume interactions</strong> so choosing a host became a readable gameplay decision instead of grabbing the nearest body.</li>
-                <li><strong>Added Steam session and lobby-code flow</strong> for hosting, joining, direct lobby lookup, and multiplayer prototype testing.</li>
+                <li><strong>Developed physics-driven weapon movement</strong> with visual smoothing, glow buildup, burst feedback, impact audio, Niagara effects, and player-readable recovery states.</li>
+                <li><strong>Built a server-authoritative possession system</strong> transferring player control between physics weapon pawns and replicated NPC hosts, handling controller handoff, weapon state, host death, ejection, and recovery.</li>
+                <li><strong>Profiled and optimized large-scale NPC/world simulation</strong>, improving fixed-seed captures from 60.41 to 109.91 FPS through tick staggering, host registries, world caches, and component tick management.</li>
+                <li><strong>Developed a Steam multiplayer session subsystem</strong> supporting lobby creation/discovery, lobby-code joining, session lifecycle handling, network-failure cleanup, and ready-gated level travel.</li>
+                <li><strong>Built scan, lure, charm, possess, and consume interactions</strong> so choosing a host became a readable gameplay decision instead of grabbing the nearest body.</li>
                 <li><strong>Developed host combat feedback</strong> including light attacks, combat roll, reticle-directed melee, swing VFX, hit feedback, and combat audio hooks.</li>
             </ul>
         </div>
@@ -250,3 +263,5 @@
 
 </body>
 </html>
+
+
