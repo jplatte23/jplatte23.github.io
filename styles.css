@@ -2857,3 +2857,13 @@ body {
         padding: 30px 0 18px;
     }
 }
+
+/* Tighten cards after removing skill tags */
+.glow-card .p-4 {
+    min-height: auto;
+}
+
+.project-card-meta + p,
+.glow-card .p-4 > p {
+    margin-bottom: 0;
+}
